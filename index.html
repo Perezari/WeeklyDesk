@@ -1,0 +1,1811 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Weekly Catalyst Desk · שבוע 25–29 במאי 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Rubik:wght@300;400;500;600;700;800&family=Assistant:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ========== THEMES ========== */
+  :root, [data-theme="cream"] {
+    --bg:        #f7f0e1;
+    --bg-2:      #fbf6ea;
+    --surface:   #fefaef;
+    --surface-2: #f3ead7;
+    --border:    #e3d5b6;
+    --border-2:  #c9b58a;
+    --text:      #3a2d1a;
+    --text-soft: #5a4830;
+    --muted:     #8c7757;
+    --muted-2:   #ab9876;
+    --primary:   #b8531e;   /* terracotta */
+    --primary-d: #8e3e14;
+    --primary-l: #e4a373;
+    --green:     #5d7a3a;   /* olive */
+    --red:       #b1432c;   /* brick */
+    --yellow:    #c98a1f;   /* honey */
+    --blue:      #4a6f8a;   /* dusty blue */
+    --purple:    #7a5a8a;   /* soft plum */
+    --header-grad: linear-gradient(180deg, rgba(184,83,30,0.10) 0%, rgba(184,83,30,0) 100%);
+    --bg-grad:
+      radial-gradient(1200px 600px at 90% -10%, rgba(184,83,30,0.10), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(125,107,67,0.06), transparent 60%),
+      linear-gradient(180deg, #f7f0e1 0%, #f2e9d3 100%);
+  }
+
+  [data-theme="sage"] {
+    --bg:        #eef1e7;
+    --bg-2:      #f5f7ee;
+    --surface:   #fafbf4;
+    --surface-2: #e6ebd9;
+    --border:    #d3dabd;
+    --border-2:  #aab891;
+    --text:      #2c3a26;
+    --text-soft: #475a3e;
+    --muted:     #6b7d62;
+    --muted-2:   #92a288;
+    --primary:   #7a5b3c;   /* warm walnut */
+    --primary-d: #5b4128;
+    --primary-l: #b39476;
+    --green:     #5a7e3e;
+    --red:       #a04a2f;
+    --yellow:    #b88532;
+    --blue:      #4a6f7a;
+    --purple:    #6f5a7a;
+    --header-grad: linear-gradient(180deg, rgba(122,91,60,0.10), rgba(122,91,60,0) 100%);
+    --bg-grad:
+      radial-gradient(1200px 600px at 90% -10%, rgba(122,91,60,0.10), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(90,126,62,0.05), transparent 60%),
+      linear-gradient(180deg, #eef1e7 0%, #e2e8d2 100%);
+  }
+
+  [data-theme="rose"] {
+    --bg:        #f6e9e2;
+    --bg-2:      #faf0e9;
+    --surface:   #fdf5ee;
+    --surface-2: #f1ddd1;
+    --border:    #e6c8b6;
+    --border-2:  #c69d83;
+    --text:      #3d2920;
+    --text-soft: #5e3f31;
+    --muted:     #936e5a;
+    --muted-2:   #b59279;
+    --primary:   #a44a4a;   /* rose */
+    --primary-d: #7a3232;
+    --primary-l: #d49090;
+    --green:     #6c7e3f;
+    --red:       #a83a2e;
+    --yellow:    #c47a26;
+    --blue:      #50697a;
+    --purple:    #7a4a6f;
+    --header-grad: linear-gradient(180deg, rgba(164,74,74,0.10), rgba(164,74,74,0) 100%);
+    --bg-grad:
+      radial-gradient(1200px 600px at 90% -10%, rgba(164,74,74,0.10), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(80,105,122,0.05), transparent 60%),
+      linear-gradient(180deg, #f6e9e2 0%, #f0dcd0 100%);
+  }
+
+  [data-theme="dark"] {
+    --bg:        #07090b;
+    --bg-2:      #0b0e12;
+    --surface:   #10141a;
+    --surface-2: #161c25;
+    --border:    #1f2a36;
+    --border-2:  #2a3a4d;
+    --text:      #e7ecf2;
+    --text-soft: #c5cdd6;
+    --muted:     #7a8a9c;
+    --muted-2:   #5a6878;
+    --primary:   #ffa116;
+    --primary-d: #b56e00;
+    --primary-l: #ffc870;
+    --green:     #00d68f;
+    --red:       #ff4d5e;
+    --yellow:    #ffd84d;
+    --blue:      #4ec1ff;
+    --purple:    #b48bff;
+    --header-grad: linear-gradient(180deg, rgba(255,161,22,0.05) 0%, rgba(255,161,22,0) 100%);
+    --bg-grad:
+      radial-gradient(1200px 600px at 90% -10%, rgba(255,161,22,0.05), transparent 60%),
+      radial-gradient(800px 500px at -10% 110%, rgba(78,193,255,0.04), transparent 60%),
+      linear-gradient(180deg, #07090b 0%, #060809 100%);
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin:0; padding:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Rubik", "Assistant", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-feature-settings: "ss01" on, "ss02" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+    transition: background-color .3s ease, color .3s ease;
+  }
+  body {
+    background-image: var(--bg-grad);
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 22px clamp(14px, 3vw, 36px) 64px;
+  }
+
+  /* ===== THEME SWITCHER ===== */
+  .theme-bar {
+    display:flex; align-items:center; gap: 8px;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .theme-bar .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    margin-left: auto;
+  }
+  .theme-btn {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--border-2);
+    cursor: pointer;
+    padding: 0;
+    transition: transform .15s ease, border-color .2s;
+    position: relative;
+  }
+  .theme-btn[aria-pressed="true"] {
+    border-color: var(--primary);
+    transform: scale(1.15);
+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--primary);
+  }
+  .theme-btn[data-set="cream"]{ background: linear-gradient(135deg,#f7f0e1 50%, #b8531e 50%); }
+  .theme-btn[data-set="sage"] { background: linear-gradient(135deg,#eef1e7 50%, #7a5b3c 50%); }
+  .theme-btn[data-set="rose"] { background: linear-gradient(135deg,#f6e9e2 50%, #a44a4a 50%); }
+  .theme-btn[data-set="dark"] { background: linear-gradient(135deg,#10141a 50%, #ffa116 50%); }
+
+  /* ===== HEADER ===== */
+  .desk-head {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    background-image: var(--header-grad);
+    border-radius: 6px;
+    padding: 22px 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .desk-head::before {
+    content:"";
+    position:absolute; inset:0;
+    background: repeating-linear-gradient(90deg, transparent 0 18px, color-mix(in srgb, var(--primary) 6%, transparent) 18px 19px);
+    pointer-events:none;
+  }
+  .desk-stripe {
+    display: flex; gap: 6px; margin-bottom: 14px; align-items: center;
+  }
+  .desk-stripe span {
+    height: 3px; width: 28px; background: var(--primary);
+    border-radius: 2px;
+  }
+  .desk-stripe span:nth-child(2){ background: var(--green); width: 18px; }
+  .desk-stripe span:nth-child(3){ background: var(--red); width: 12px; }
+  .desk-stripe small {
+    color: var(--primary);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    margin-right: auto;
+    font-weight: 600;
+  }
+  .desk-title {
+    font-family: "Frank Ruhl Libre", "Rubik", serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4.6vw, 46px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 4px 0 6px;
+    color: var(--text);
+  }
+  .desk-title em {
+    font-style: normal;
+    color: var(--primary);
+  }
+  .desk-sub {
+    color: var(--text-soft);
+    font-size: 15px;
+    max-width: 760px;
+    line-height: 1.7;
+  }
+  .desk-meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0;
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+  }
+  .desk-meta div {
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px;
+    background: color-mix(in srgb, var(--surface) 60%, transparent);
+  }
+  .desk-meta div b {
+    display:block;
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: "JetBrains Mono", monospace;
+  }
+  .desk-meta div span {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  /* ===== SECTION ===== */
+  section {
+    margin-top: 26px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .sec-head {
+    display:flex; align-items:flex-end; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap;
+    padding: 16px 22px;
+    border-bottom: 1px solid var(--border);
+    background: color-mix(in srgb, var(--surface-2) 60%, transparent);
+  }
+  .sec-num {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+  }
+  h2 {
+    font-family: "Frank Ruhl Libre", "Rubik", serif;
+    font-weight: 800;
+    font-size: clamp(22px, 2.4vw, 30px);
+    margin: 2px 0 0;
+    line-height: 1.15;
+    letter-spacing: -0.005em;
+    color: var(--text);
+  }
+  .sec-tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    border: 1px solid var(--border-2);
+    padding: 4px 8px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    background: var(--surface);
+  }
+  .sec-body { padding: 18px 22px 24px; }
+  .sec-body p { margin: 0 0 12px; color: var(--text-soft); }
+  .sec-body p:last-child { margin-bottom: 0; }
+  .sec-body strong { color: var(--text); font-weight: 700; }
+
+  /* ===== MARKET GRID ===== */
+  .market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--border);
+    border-right: 1px solid var(--border);
+    margin-bottom: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .market-grid > div {
+    padding: 14px 16px;
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-2);
+  }
+  .market-grid b {
+    display:block;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.18em;
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .market-grid .val {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    line-height: 1.1;
+  }
+  .market-grid .chg {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .up   { color: var(--green); }
+  .down { color: var(--red); }
+  .neu  { color: var(--muted); }
+
+  /* ===== TABLES ===== */
+  .tbl-wrap {
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    margin: 8px 0 4px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--bg-2);
+    min-width: 600px;
+  }
+  thead th {
+    background: var(--surface-2);
+    color: var(--primary);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-align: right;
+    padding: 11px 12px;
+    border-bottom: 1px solid var(--border-2);
+    position: sticky;
+    top: 0;
+  }
+  tbody td {
+    padding: 12px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+    line-height: 1.55;
+  }
+  tbody tr:hover { background: color-mix(in srgb, var(--primary) 4%, transparent); }
+  tbody tr:last-child td { border-bottom: 0; }
+  td.mono, th.mono { font-family: "JetBrains Mono", monospace; font-size: 12px; }
+  td.ticker {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* ===== BADGES ===== */
+  .badge {
+    display: inline-block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    padding: 3px 8px;
+    border: 1px solid;
+    font-weight: 700;
+    white-space: nowrap;
+    border-radius: 3px;
+  }
+  .b-high   { color: var(--green); border-color: color-mix(in srgb, var(--green) 50%, transparent); background: color-mix(in srgb, var(--green) 10%, transparent); }
+  .b-med    { color: var(--yellow); border-color: color-mix(in srgb, var(--yellow) 45%, transparent); background: color-mix(in srgb, var(--yellow) 8%, transparent); }
+  .b-low    { color: var(--muted); border-color: var(--border-2); background: var(--surface); }
+  .b-buy    { color: var(--green); border-color: color-mix(in srgb, var(--green) 50%, transparent); background: color-mix(in srgb, var(--green) 9%, transparent); }
+  .b-watch  { color: var(--yellow); border-color: color-mix(in srgb, var(--yellow) 45%, transparent); background: color-mix(in srgb, var(--yellow) 7%, transparent);}
+  .b-avoid  { color: var(--red); border-color: color-mix(in srgb, var(--red) 50%, transparent); background: color-mix(in srgb, var(--red) 8%, transparent); }
+  .b-crowd  { color: var(--purple); border-color: color-mix(in srgb, var(--purple) 45%, transparent); background: color-mix(in srgb, var(--purple) 7%, transparent);}
+  .b-info   { color: var(--blue); border-color: color-mix(in srgb, var(--blue) 45%, transparent); background: color-mix(in srgb, var(--blue) 7%, transparent);}
+
+  /* ===== CALLOUT / VERDICT ===== */
+  .callout {
+    border-right: 3px solid var(--primary);
+    background: color-mix(in srgb, var(--primary) 7%, transparent);
+    padding: 12px 18px;
+    margin: 14px 0;
+    font-size: 14px;
+    color: var(--text);
+    border-radius: 3px;
+    line-height: 1.7;
+  }
+  .callout b { color: var(--primary); font-weight: 700; }
+
+  .verdict {
+    border: 1px solid var(--primary);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--primary) 12%, transparent), color-mix(in srgb, var(--primary) 3%, transparent));
+    padding: 22px 24px;
+    margin-top: 22px;
+    border-radius: 4px;
+  }
+  .verdict h3 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 900;
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: var(--primary);
+  }
+  .verdict p { color: var(--text); }
+
+  /* ===== THEME CARDS ===== */
+  .theme-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin: 6px 0;
+  }
+  .theme-card {
+    border: 1px solid var(--border);
+    background: var(--bg-2);
+    padding: 14px 16px;
+    border-radius: 4px;
+  }
+  .theme-card .tc-head {
+    display:flex; justify-content: space-between; align-items: center; gap: 8px;
+    border-bottom: 1px dashed var(--border-2);
+    padding-bottom: 8px; margin-bottom: 10px;
+  }
+  .theme-card h4 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text);
+  }
+  .theme-card ul { padding-right: 18px; margin: 6px 0 0; font-size: 13px; color: var(--text-soft); }
+  .theme-card li { margin-bottom: 5px; }
+
+  /* ===== SCORE BAR ===== */
+  .score-row {
+    display:grid; grid-template-columns: 240px 60px 1fr;
+    gap: 12px; align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .score-row:last-child { border-bottom: 0; }
+  .score-label { font-weight: 500; color: var(--text); font-size: 14px; }
+  .score-num {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 17px;
+    text-align: center;
+  }
+  .score-bar {
+    height: 7px; background: var(--surface-2); position: relative; overflow: hidden;
+    border-radius: 4px;
+  }
+  .score-bar > i {
+    display:block; height:100%;
+    background: linear-gradient(90deg, var(--primary-d), var(--primary), var(--primary-l));
+    border-radius: 4px;
+  }
+
+  /* ===== INLINE TICKERS ===== */
+  code.tk {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 12px;
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    padding: 2px 6px;
+    border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+    border-radius: 3px;
+  }
+
+  /* ===== OPTIONS CARDS ===== */
+  .opt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 14px;
+    margin: 6px 0;
+  }
+  .opt-card {
+    border: 1px solid var(--border);
+    background: var(--bg-2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .opt-card-head {
+    background: var(--surface-2);
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .opt-ticker {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 18px;
+  }
+  .opt-strategy {
+    font-family: "Frank Ruhl Libre", serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .opt-card-body { padding: 14px 16px; }
+  .opt-row {
+    display:flex; justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dotted var(--border);
+    font-size: 13px;
+  }
+  .opt-row:last-of-type { border-bottom: 0; }
+  .opt-row b {
+    color: var(--muted);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+  .opt-row span {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .opt-thesis {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--text-soft);
+  }
+  .opt-thesis b { color: var(--text); }
+  .opt-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.08em;
+    border-radius: 3px;
+    font-weight: 700;
+  }
+  .tag-bull { background: color-mix(in srgb, var(--green) 15%, transparent); color: var(--green); border:1px solid color-mix(in srgb,var(--green) 40%, transparent); }
+  .tag-bear { background: color-mix(in srgb, var(--red) 15%, transparent); color: var(--red); border:1px solid color-mix(in srgb,var(--red) 40%, transparent); }
+  .tag-neut { background: color-mix(in srgb, var(--blue) 15%, transparent); color: var(--blue); border:1px solid color-mix(in srgb,var(--blue) 40%, transparent); }
+  .tag-hedge{ background: color-mix(in srgb, var(--purple) 15%, transparent); color: var(--purple); border:1px solid color-mix(in srgb,var(--purple) 40%, transparent); }
+  .tag-inc  { background: color-mix(in srgb, var(--yellow) 18%, transparent); color: var(--yellow); border:1px solid color-mix(in srgb,var(--yellow) 40%, transparent); }
+
+  .risk-pill {
+    display:inline-block;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .risk-low { background: color-mix(in srgb, var(--green) 18%, transparent); color: var(--green);}
+  .risk-med { background: color-mix(in srgb, var(--yellow) 22%, transparent); color: var(--yellow);}
+  .risk-high{ background: color-mix(in srgb, var(--red) 18%, transparent); color: var(--red);}
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--border);
+    padding: 18px 0 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-family: "JetBrains Mono", monospace;
+  }
+  footer .src { color: var(--muted-2); margin-top: 8px; font-size: 11px; line-height: 1.7; }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 720px){
+    .market-grid > div { padding: 10px 12px; }
+    .market-grid .val { font-size: 18px; }
+    .sec-body { padding: 14px 16px 18px; }
+    .desk-head { padding: 18px 16px; }
+    .sec-head { padding: 14px 16px; }
+    .score-row { grid-template-columns: 1fr 50px; gap: 6px; }
+    .score-row .score-bar { grid-column: 1 / span 2; }
+    .desk-title { font-size: 26px; }
+    table { font-size: 13px; }
+    tbody td { padding: 10px 9px; }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    body { background:#fff; color:#000; }
+    .theme-bar { display:none; }
+    .desk-head, section { border-color: #ccc; background: #fff; box-shadow:none; }
+    .sec-head, .market-grid > div { background:#fafafa; }
+    table { background: #fff; }
+    thead th { background:#eee; color:#000; }
+    .up { color:#006e3a !important; } .down { color:#a4001b !important; }
+    code.tk { background:#fff5e0; border-color:#e0a800; color:#a76b00; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- THEME SWITCHER -->
+  <div class="theme-bar">
+    <span class="label">סכמת צבעים</span>
+    <button class="theme-btn" data-set="cream" aria-pressed="true" title="קרם חמים"></button>
+    <button class="theme-btn" data-set="sage"  aria-pressed="false" title="מרווה רכה"></button>
+    <button class="theme-btn" data-set="rose"  aria-pressed="false" title="ורד עתיק"></button>
+    <button class="theme-btn" data-set="dark"  aria-pressed="false" title="טרמינל כהה"></button>
+  </div>
+
+  <!-- HEADER -->
+  <header class="desk-head">
+    <div class="desk-stripe">
+      <span></span><span></span><span></span>
+      <small>WEEKLY CATALYST DESK · INSTITUTIONAL</small>
+    </div>
+    <h1 class="desk-title">דסק קטליסטים שבועי · <em>שבוע 25–29 במאי 2026</em></h1>
+    <p class="desk-sub">חיבור בין מאקרו, שרשראות ערך, צווארי בקבוק, צבר הזמנות ותמחור — לזיהוי איפה הון מוסדי עשוי לזרום השבוע. השוק נכנס לשבוע מקוצר (Memorial Day) אחרי 8 שבועות חיוביים רצופים ב־S&amp;P 500. הקטליזטור המרכזי השבוע: דוח PCE ביום חמישי, וגל דוחות תוכנה ארגוני (CRM, MRVL, DELL, CRWD, COST).</p>
+
+    <div class="desk-meta">
+      <div><b>DATE</b><span>SUN · 24·MAY·2026</span></div>
+      <div><b>WEEK</b><span>W22 / 2026</span></div>
+      <div><b>HOLIDAY</b><span>MON CLOSED · MEMORIAL DAY</span></div>
+      <div><b>EARNINGS WEEK</b><span>~189 REPORTS</span></div>
+      <div><b>KEY PRINT</b><span>PCE · THU 28·MAY</span></div>
+      <div><b>FOMC NEXT</b><span>17–18·JUN·2026</span></div>
+    </div>
+  </header>
+
+  <!-- ============ SECTION 1 ============ -->
+  <section>
+    <div class="sec-head">
+      <div>
+        <div class="sec-num">01 / 16</div>
+        <h2>משטר מאקרו ונקודת פתיחה לשוק</h2>
+      </div>
+      <span class="sec-tag">Tape · Yields · Sentiment · Liquidity</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="market-grid">
+        <div><b>S&amp;P 500</b><span class="val">7,473.47</span><div class="chg up">+0.37% · רצף 8 שבועות</div></div>
+        <div><b>NASDAQ COMP</b><span class="val">26,343.97</span><div class="chg up">+0.19% · 7 מתוך 8</div></div>
+        <div><b>DOW JONES</b><span class="val">50,579.70</span><div class="chg up">+0.58% · שיא סגירה</div></div>
+        <div><b>RUSSELL 2000</b><span class="val">2,869.23</span><div class="chg up">+0.91% · קרוב ל־ATH</div></div>
+        <div><b>VIX</b><span class="val">16.70</span><div class="chg down">-0.36% · רגוע</div></div>
+        <div><b>US 10Y</b><span class="val">4.558%</span><div class="chg down">-2.6bps</div></div>
+        <div><b>US 30Y</b><span class="val">5.064%</span><div class="chg down">-4.7bps</div></div>
+        <div><b>US 2Y</b><span class="val">4.08%</span><div class="chg neu">·</div></div>
+        <div><b>BRENT</b><span class="val">$100.21</span><div class="chg up">+0.71% · W -5%</div></div>
+        <div><b>WTI</b><span class="val">$96.60</span><div class="chg up">+0.26% · W -8%</div></div>
+        <div><b>GOLD</b><span class="val">$4,523.20</span><div class="chg down">-0.42%</div></div>
+        <div><b>BTC</b><span class="val">$76,736</span><div class="chg up">+1.11%</div></div>
+        <div><b>AAII BULL</b><span class="val">31.7%</span><div class="chg down">מתחת ל־37.5% היסטורי</div></div>
+        <div><b>AAII BEAR</b><span class="val">~43.6%</span><div class="chg down">14 שבוע מעל ממוצע</div></div>
+        <div><b>BULL−BEAR</b><span class="val">−11.9</span><div class="chg down">קיצוני נמוך</div></div>
+        <div><b>NAAIM</b><span class="val">77.34</span><div class="chg down">מ־96.67 · קיצוץ חשיפה</div></div>
+        <div><b>FED FUNDS</b><span class="val">3.50–3.75%</span><div class="chg neu">−175bps מ־ספט 2024</div></div>
+        <div><b>RSP / SPY YTD</b><span class="val">+5pp</span><div class="chg up">רוטציה לרוחב</div></div>
+      </div>
+
+      <div class="callout">
+        <b>קריאת רוחב:</b> 132 שיאי 52 שבועות ביום שישי. RSP ממשיך להוביל מול SPY בכ־5pp YTD. הקצאת RSP — תעשייתי 16% · פיננסיים 15% · טכנולוגיה 14% — מול ~30% טכנולוגיה ב־SPY. זו רוטציה רחבה, לא ראלי מגה־קאפ צר.
+      </div>
+
+      <p><strong>מסקנת משטר:</strong> <span style="color:var(--primary);font-weight:700;">Selective Risk-On · Broadening Rotation</span>. השוק רץ 8 שבועות אך הריטייל הופך דובי (AAII bull 31.7%) בעוד שמנהלי NAAIM מקצצים חשיפה מ־96 ל־77 — דיברגנציה זהירה. תשואות 30Y מעל 5% ואינפלציה headline 3.8% מציבות סיכון. תזרים ההון <strong>אל הקבלן הפיזי של ה־AI</strong>, לא אל ה־platform. הון זורם לחומרה — Power, Grid, Cooling, Defense — יותר מאשר לחזון.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 2 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">02 / 16</div><h2>חדשות מזיזות שוק</h2></div>
+      <span class="sec-tag">Facts · Then · Desk View</span>
+    </div>
+    <div class="sec-body">
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;margin:0 0 10px;color:var(--primary);">עובדות מאומתות</h3>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>מועד</th><th>אירוע</th><th>השפעה</th></tr></thead>
+        <tbody>
+        <tr><td class="mono">20·MAY</td><td><strong>NVDA Q1 FY27:</strong> הכנסות $81.6B (+85% YoY), Data Center $75.2B (+92%), הנחיה Q2 $91B ±2%. רכישה עצמית +$80B, דיבידנד ×25 ל־$0.25.</td><td><span class="badge b-buy">חיובי</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td><strong>Dow +294 לסגירת שיא 50,579.70;</strong> S&amp;P שבוע 8 ברציפות; Russell +0.91%.</td><td><span class="badge b-buy">RISK-ON</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td><strong>נפט -5% בשבוע</strong> על התקדמות שיחות US–איראן; Brent $103→$100; WTI $96.</td><td><span class="badge b-info">תרחיש שלום</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td>סנטימנט אוניברסיטת מישיגן <strong>שפל חדש</strong> — חששות אינפלציה ומחירי דלק.</td><td><span class="badge b-watch">בעייתי</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td>Goldman Sachs מתריע: עליית תשואות + אינפלציה מאיימים על תיקון.</td><td><span class="badge b-watch">תוריעה</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td>Estée Lauder–Puig: עסקת המיזוג מבוטלת; <code class="tk">EL</code> +12% Premarket.</td><td><span class="badge b-info">M&amp;A</span></td></tr>
+        <tr><td class="mono">21·MAY</td><td>Workday, Zoom, Take-Two מכים תחזיות; <strong>GTA VI</strong> תאריך נובמבר אושר.</td><td><span class="badge b-buy">חיובי</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td><code class="tk">ARM</code> השלים ראלי שבועי של ~50% — תזכורת לצפיפות.</td><td><span class="badge b-crowd">צפוף</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td>מימשל טראמפ מקצה <strong>$2B</strong> ל־IBM וחברות נוספות בקוונטום.</td><td><span class="badge b-buy">קטליזטור</span></td></tr>
+        <tr><td class="mono">12·MAY</td><td>Elbit Systems זוכה בהזמנת US Army בסך $212M לציוד ראיית לילה (ENVG-B).</td><td><span class="badge b-buy">BACKLOG</span></td></tr>
+        <tr><td class="mono">SHIFT</td><td>Trump הציע <strong>תקציב הגנה $1.5T ל־FY27</strong>; Golden Dome ~$151–185B ל־10 שנים.</td><td><span class="badge b-buy">STRUCTURAL</span></td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;margin:18px 0 10px;color:var(--primary);">פרשנות דסק</h3>
+      <p><strong>הסיפור האמיתי השבוע אינו ה־Dow ב־ATH.</strong> הוא בסט נתונים שיצביע על האם הריאלי (PCE) מצדיק את ה־valuation. הריטייל כבר חזר לעמדת זהירות בעוד שמנהלים פעילים מקצרים חשיפה. הדיברגנציה הזו ביחד עם שמיני שבוע של עליות ו־VIX 16.7 שקטה — זו <strong>קרקע פורייה לתנודה הפוכה לכל יד</strong> ב־PCE Surprise. <strong>Dow ב־50K + נפט −5% + Russell במומנטום = רוטציה חיה.</strong></p>
+
+      <p><strong>איפה ההון זז עכשיו:</strong> מ־AI Platform Crowded Trades אל החומרה הפיזית (Power, Grid, Cooling, Defense Hardware). מהמגה־קאפים אל ה־"שרשרת הערך השנייה" — Equipment Makers עם backlog ממומש ולא נרטיב.</p>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 3 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">03 / 16</div><h2>מפת קטליסטים שבועית</h2></div>
+      <span class="sec-tag">Earnings · Macro · Events</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>יום</th><th>קטליזטורים מרכזיים</th><th>למה זה חשוב</th><th>מי מרוויח</th><th>מי נפגע</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="mono"><strong>MON 25</strong></td>
+          <td>שווקי ארה״ב סגורים · Memorial Day. דוחות זניחים (JOYY, FTHM).</td>
+          <td>נזילות נמוכה אסיה/אירופה</td>
+          <td>הגנה לפוזיציות</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>TUE 26</strong></td>
+          <td><code class="tk">ESLT</code> Elbit · <code class="tk">AZO</code> · <code class="tk">MOD</code> Modine · <code class="tk">SMTC</code> · <code class="tk">SQM</code> · <code class="tk">BOX</code> · <code class="tk">TCOM</code> · <strong>Consumer Confidence · FHFA HPI</strong></td>
+          <td>פתיחת השבוע אחרי החופש · Elbit מוסר אינדיקציה לעוצמת backlog ההגנה · Modine = pure-play AI cooling</td>
+          <td>הגנה · Cooling · Lithium</td>
+          <td>צרכן חלש</td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>WED 27</strong></td>
+          <td><code class="tk">CRM</code> · <code class="tk">MRVL</code> · <code class="tk">DELL</code> · <code class="tk">HPQ</code> · <code class="tk">PSTG</code> · <code class="tk">A</code> · <code class="tk">ANF</code> · <code class="tk">DKS</code> · <code class="tk">BMO</code> · <code class="tk">BNS</code> · <strong>Fed Beige Book</strong></td>
+          <td><strong>הלילה הכי חשוב של השבוע</strong> · MRVL = AI ASIC; CRM = Agentforce; DELL = AI servers; PSTG = AI storage</td>
+          <td>AI Hardware Chain · Enterprise SaaS</td>
+          <td>קמעונאות לבוש (ANF, DKS)</td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>THU 28</strong></td>
+          <td><strong>★ PCE Inflation (Apr) · GDP Q1 (2nd est) · Jobless Claims · Pending Home Sales ★</strong><br><code class="tk">CRWD</code> · <code class="tk">COST</code> · <code class="tk">DLTR</code> · <code class="tk">BBY</code> · <code class="tk">ADSK</code> · <code class="tk">RY</code> · <code class="tk">TD</code></td>
+          <td><strong>היום הכי חשוב לשבוע.</strong> PCE הוא המדד המועדף על Fed. כל הפתעה כלפי מעלה תכבה ציפיות לקיצוץ ביוני</td>
+          <td>אם PCE רך: cyclicals · Russell · REITs<br>אם PCE חזק: Energy · Cash · Banks</td>
+          <td>אם PCE חזק: ארוך משך · REITs · Utilities · Growth</td>
+        </tr>
+        <tr>
+          <td class="mono"><strong>FRI 29</strong></td>
+          <td>שקט יחסי · ~8 דוחות. סוף חודש · רה־בלאנס פנסיוני</td>
+          <td>תנודתיות סוף חודש; Window Dressing</td>
+          <td>שמות להעלות במשקל</td>
+          <td>שמות לזרוק</td>
+        </tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout"><b>הקטליזטור היחיד שיכול לשנות את כל המסחר השבוע:</b> Core PCE ביום חמישי 28·MAY בשעה 8:30 ET. הפתעה כלפי מעלה תהרוס את ה־8 שבועות הירוקים תוך 48 שעות. הפתעה כלפי מטה תזניק את Russell וה־Equipment Makers.</div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 4: WEEKLY OPTIONS DESK ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">04 / 16</div><h2>שולחן אופציות שבועי · Weekly Options Desk</h2></div>
+      <span class="sec-tag">Defined Risk · Catalyst-Driven</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="callout">
+        <b>הגישה השבועית לאופציות:</b> השוק נכנס אחרי 8 שבועות ירוקים עם VIX 16.7 — IV נמוכה בכלל המדדים אבל גבוהה בשמות עם דוח (CRWD, MRVL, ESLT, CRM). זה מצב קלאסי שבו <strong>מסחר כיווני זול</strong> ב־SPY/QQQ, ו־<strong>premium selling אטרקטיבי</strong> סביב earnings event vol. כל פוזיציה כאן עם <strong>defined risk</strong> — אסור לקצר נפרד (naked) על דוח. גודל פוזיציה: לא יותר מ־1–2% מהתיק לטרייד יחיד.
+      </div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:18px 0 12px;">A · משחקי דוחות (Pre-Earnings Directional)</h3>
+
+      <div class="opt-grid">
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">MRVL · WED 27·MAY AMC</div>
+              <div class="opt-strategy">Bull Call Spread</div>
+            </div>
+            <span class="opt-tag tag-bull">BULLISH</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+1 Call ATM / −1 Call ATM+5</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>30·MAY (post-earnings)</span></div>
+            <div class="opt-row"><b>STRIKES (אינדיקטיבי)</b><span>$78c / $83c</span></div>
+            <div class="opt-row"><b>MAX RISK</b><span>~$2.00 / חוזה ($200)</span></div>
+            <div class="opt-row"><b>MAX REWARD</b><span>~$3.00 / חוזה (R/R 1.5:1)</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Event-driven</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> AI ASIC ramp ל־hyperscalers; הנחיית Q1 FY27 ב־$2.40B (+27% QoQ); EPS guide $0.74–0.84 (mid &gt; consensus). NVDA הוכיח שביקוש AI Compute אמיתי. ה־spread <strong>מגדיר את הסיכון</strong> מראש ומוריד את עלות ה־IV הגבוה.<br>
+              <b>Trigger יציאה:</b> סגירה מתחת ל־50DMA לפני דוח = ביטול. <b>Exit מתוכנן:</b> 60–80% מ־Max ב־1–2 ימים פוסט־דוח.
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">MOD · TUE 26·MAY</div>
+              <div class="opt-strategy">Long Call (Cheap Lotto)</div>
+            </div>
+            <span class="opt-tag tag-bull">BULLISH</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+1 Call OTM</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>20·JUN (4 שבועות)</span></div>
+            <div class="opt-row"><b>STRIKE</b><span>5–7% OTM משער מניה</span></div>
+            <div class="opt-row"><b>MAX RISK</b><span>פרמיה ששולמה בלבד</span></div>
+            <div class="opt-row"><b>MAX REWARD</b><span>בלתי מוגבל תאורטית</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-high">HIGH</i> בינארי</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> Pure-play AI Cooling. הכנסות Data Center +78% YoY ברבעון שעבר. ההנחיה לשנת fiscal 2026 הועלתה ל־+15–20%. Modine פחות צפוף מ־Vertiv אבל אותו narrative. אם הדוח מכה — gap up אגרסיבי.<br>
+              <b>סיכון מרכזי:</b> מקטע אוטומוטיב עלול לגרור; גודל בודד לא יותר מ־0.5% מהתיק.
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">CRWD · THU 28·MAY AMC</div>
+              <div class="opt-strategy">Iron Condor (IV Crush)</div>
+            </div>
+            <span class="opt-tag tag-neut">NEUTRAL</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>−Put / +Put OTM · +Call / −Call OTM</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>30·MAY (פג יום אחרי)</span></div>
+            <div class="opt-row"><b>רוחב</b><span>Wings ~7–8% משער; Bodies 4–5%</span></div>
+            <div class="opt-row"><b>CREDIT</b><span>~30–40% מרוחב ה־wing</span></div>
+            <div class="opt-row"><b>MAX RISK</b><span>רוחב − credit (מוגדר)</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Event vol</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> CRWD ב־ATH $666 לפני דוח · IV מוקצן · expected move הסטורי קטן מהמשתמע. תמחור דורש "ביצוע מושלם" — וגם אם יש beat, הכוונה היא ל־IV crush ולא לכיוון. <strong>מבנה הגנתי</strong>: defined risk מובהק.<br>
+              <b>סיכון מרכזי:</b> DOJ/SEC inquiry פתוח — כל הפתעה רגולטורית = gap מחוץ ל־wings. אל תפתח אם המניה זזה &gt;3% פתיחה.
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">ESLT · TUE 26·MAY</div>
+              <div class="opt-strategy">Call Diagonal</div>
+            </div>
+            <span class="opt-tag tag-bull">BULLISH (Patient)</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+Call LEAP Sep · −Call Short Jun</span></div>
+            <div class="opt-row"><b>שורט STRIKE</b><span>5–7% OTM משער נוכחי</span></div>
+            <div class="opt-row"><b>לונג STRIKE</b><span>ATM או 5% ITM</span></div>
+            <div class="opt-row"><b>MAX RISK</b><span>Debit שולם (מוגדר)</span></div>
+            <div class="opt-row"><b>אופטימום</b><span>שערים סביב strike השורט בפג</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i></span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> backlog $28.1B שיא; PULS $750M; חוזים אסטרטגיים. אבל P/E ~53× — דוח עלול לעשות gap up ואז מימוש רווח. ה־diagonal <strong>גובה תיטא</strong> מהשורט ושומר חשיפה ארוכה ל־thesis הרב־שנתי.<br>
+              <b>בונוס:</b> אם המניה תרד פוסט־דוח — ניתן לגלגל את השורט קדימה בלי לפגוע ב־thesis.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:24px 0 12px;">B · גידור מאקרו · PCE Hedge</h3>
+
+      <div class="opt-grid">
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">SPY · PCE Hedge</div>
+              <div class="opt-strategy">Bear Put Spread</div>
+            </div>
+            <span class="opt-tag tag-hedge">HEDGE</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+1 Put ATM / −1 Put OTM</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>30·MAY (שישי אחרי PCE)</span></div>
+            <div class="opt-row"><b>רוחב</b><span>2–3% (כ־$15 רוחב)</span></div>
+            <div class="opt-row"><b>עלות יחסית</b><span>~25–35% מהרוחב</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-low">LOW</i> Pure hedge</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> ביטוח זול מול Core PCE Surprise &gt;0.3% MoM. ה־spread עולה ~$3–5 לחוזה ומחזיר עד $15 בתרחיש שלילי. גודל: 1 חוזה לכל $30K SPY equivalent בתיק. <strong>זה לא טרייד — זו פוליסה.</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">IWM · Russell Continuation</div>
+              <div class="opt-strategy">Long Call (Soft PCE Play)</div>
+            </div>
+            <span class="opt-tag tag-bull">BULLISH (Conditional)</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+1 Call ATM</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>20·JUN (3.5 שבועות)</span></div>
+            <div class="opt-row"><b>STRIKE</b><span>ATM</span></div>
+            <div class="opt-row"><b>TRIGGER</b><span>פתח רק אם PCE רך (&lt;0.2% MoM)</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Event-conditional</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> Russell ב־+0.91% ביום שישי, מתחת ל־ATH. PCE רך = הצדקה לעוד קיצוצים = Small-Cap rally. <strong>אל תפתח לפני הפרסום</strong> — פותח אחרי 8:35 ET ביום חמישי רק אם PCE יוצא מתחת לציפיות.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:24px 0 12px;">C · Income / Premium Selling (מתאים לתיק קיים)</h3>
+
+      <div class="opt-grid">
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">LMT · Cash Secured Put</div>
+              <div class="opt-strategy">Sell Put OTM</div>
+            </div>
+            <span class="opt-tag tag-inc">INCOME</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>−1 Put OTM (3–5%)</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>20·JUN (~30 ימים)</span></div>
+            <div class="opt-row"><b>DELTA יעד</b><span>~0.20–0.25</span></div>
+            <div class="opt-row"><b>הון נדרש</b><span>strike × 100 (cash secured)</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-low">LOW</i> רוצים את המניה</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> P/E forward 17× זול לסקטור; backlog $194B; Golden Dome prime. אם מגיע לסטרייק — אתה קונה LMT במחיר עוד יותר טוב. אם לא — שומר על הפרמיה (~1.5–2% חודשי).<br>
+              <b>זה לא טרייד ספקולטיבי — זו רכישת ערך באמצעות אופציות.</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">GEV · Cash Secured Put</div>
+              <div class="opt-strategy">Sell Put OTM</div>
+            </div>
+            <span class="opt-tag tag-inc">INCOME</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>−1 Put OTM (5–7%)</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>20·JUN</span></div>
+            <div class="opt-row"><b>DELTA יעד</b><span>~0.20</span></div>
+            <div class="opt-row"><b>הון נדרש</b><span>strike × 100</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Volatile</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> backlog $150B שיא · "האקדח הכי חזק ב־AI Power". המניה הולכת אך תנודתית — Sell Put נותן entry במחיר טוב יותר עם פרמיה אטרקטיבית. אופציה לרגישות גבוהה ל־PCE — אם השוק מתקן, ניתן לגלגל.
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">NVDA · Covered Strangle</div>
+              <div class="opt-strategy">Post-Earnings IV Harvesting</div>
+            </div>
+            <span class="opt-tag tag-inc">INCOME</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>על מניות שכבר בידיים: −1 Call OTM, −1 Put OTM</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>20·JUN (~25 ימים)</span></div>
+            <div class="opt-row"><b>DELTA יעד</b><span>0.15–0.20 כל רגל</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Consolidation play</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> פוסט־דוח NVDA נכנס לקונסולידציה — IV עוד גבוה אבל יורד. ה־Strangle אוסף פרמיה משני הצדדים. הקול מכוסה ב־100 מניות; הפוט = cash secured או margin. <strong>לא לפתוח אם אין לך פוזיציה ארוכה ב־NVDA.</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:24px 0 12px;">D · LEAPS · השקעה ארוכת טווח עם אופציות</h3>
+
+      <div class="opt-grid">
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">GEV · LEAP Jan 2027</div>
+              <div class="opt-strategy">Long ITM Call (Stock Replacement)</div>
+            </div>
+            <span class="opt-tag tag-bull">LONG-TERM</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+1 Call DEEP ITM (delta ~0.75–0.85)</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>JAN 2027 (~8 חודשים)</span></div>
+            <div class="opt-row"><b>STRIKE</b><span>15–20% ITM</span></div>
+            <div class="opt-row"><b>היתרון</b><span>הון פנוי ~70%; חשיפה דומה למניה</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> מינוף מוגדר</span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> backlog $150B; gas turbine ב־~110GW slot 2026/27; "Equipment Maker האולטימטיבי" ל־AI Power. דרך LEAP — חשיפה מלאה למניה ב־30% מההון. הון פנוי יכול לעבוד במקום אחר.
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card">
+          <div class="opt-card-head">
+            <div>
+              <div class="opt-ticker">RTX · Calendar Spread</div>
+              <div class="opt-strategy">Time Decay Harvest</div>
+            </div>
+            <span class="opt-tag tag-bull">SLOW-BULLISH</span>
+          </div>
+          <div class="opt-card-body">
+            <div class="opt-row"><b>STRUCTURE</b><span>+Call Sep / −Call Jun (same strike)</span></div>
+            <div class="opt-row"><b>STRIKE</b><span>ATM</span></div>
+            <div class="opt-row"><b>MAX RISK</b><span>Debit (מוגדר)</span></div>
+            <div class="opt-row"><b>אופטימום</b><span>תפוגת Jun ליד strike</span></div>
+            <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-low">LOW</i></span></div>
+            <div class="opt-thesis">
+              <b>תזה:</b> RTX מתבסס סביב backlog $271B; FCF $8.25–8.75B. תנודה איטית = קלאסי ל־calendar. <strong>גובה תיטא ביוני</strong> ושומר חשיפה לאוגוסט/ספטמבר.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="callout" style="margin-top:22px;">
+        <b>כללי ניהול סיכון מחייבים:</b>
+        <ul style="margin:8px 0 0; padding-right:18px; color:var(--text-soft);">
+          <li>אסור לקצר נפרד (naked) על דוח רבעוני — תמיד spread או iron condor.</li>
+          <li>כל פוזיציה לא יותר מ־1–2% מהתיק לטרייד יחיד.</li>
+          <li>על Earnings Plays — exit מתוכנן 24–48 שעות פוסט־דוח, גם אם רווח קטן (IV crush גורף).</li>
+          <li>על LEAPS — stop ב־30–35% הפסד; לא מחזיקים עד פג.</li>
+          <li>שמירה על 10–15% במזומן לקראת PCE — לאי־ודאות בינארית.</li>
+          <li>פרמיות שאתה מוכר חייבות להיות "מוכן לקנות את המניה" (CSP) או "מוכן למסור את המניה" (CC) — אחרת אל תיכנס.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 5 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">05 / 16</div><h2>תיגליות תמה — 10 טריטוריות</h2></div>
+      <span class="sec-tag">Where The Money Flows</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="theme-cards">
+        <div class="theme-card">
+          <div class="tc-head"><h4>1 · AI Power &amp; Grid Infrastructure</h4><span class="badge b-high">HIGH</span></div>
+          <ul>
+            <li>GEV Q1 הזמנות $18.3B (+71% organic), backlog $150B שיא</li>
+            <li>הזמנות data center רבעון אחד גדולות מכל 2025</li>
+            <li>טרנספורמטור / Switchgear lead times &gt; 2 שנים</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>2 · AI Compute &amp; Hyperscaler Capex</h4><span class="badge b-high">HIGH</span></div>
+          <ul>
+            <li>$650B–$725B Capex 2026 מצרפי (MSFT, GOOGL, META, AMZN)</li>
+            <li>NVDA blowout אישר את הביקוש</li>
+            <li>סיכון: ROI נדרש להוכיח את עצמו</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>3 · Defense · Rearmament</h4><span class="badge b-high">HIGH</span></div>
+          <ul>
+            <li>תקציב הגנה $1.5T FY27 (Trump הציע)</li>
+            <li>Golden Dome ~$151–185B / 10Y</li>
+            <li>Elbit backlog $28.1B; RTX $271B; LMT $194B</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>4 · Nuclear &amp; Uranium</h4><span class="badge b-med">MED</span></div>
+          <ul>
+            <li>VST PPA 20 שנה עם AWS (1,200MW) ו־Meta (2,600+MW)</li>
+            <li>CCJ Q1 EPS $0.34 beat 30%; Scotia PT $175</li>
+            <li>תמחור מתוח (VST 72×, CCJ 125× P/E)</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>5 · Data Center Cooling (Liquid)</h4><span class="badge b-high">HIGH</span></div>
+          <ul>
+            <li>VRT backlog $15B (+109% YoY); margin 20.8% (+430bps)</li>
+            <li>ETN רכשה Boyd Thermal ($9.5B liquid cooling)</li>
+            <li>MOD data center sales +78% YoY</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>6 · Cybersecurity</h4><span class="badge b-med">MED</span></div>
+          <ul>
+            <li>CRWD ARR $4.4B; דוח חמישי 28·MAY</li>
+            <li>PANW, ZS חזקים; קונסולידציה ל־Falcon</li>
+            <li>צפיפות מומנטום גבוהה</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>7 · Oil &amp; Energy Risk</h4><span class="badge b-med">MED</span></div>
+          <ul>
+            <li>Brent $100, WTI $96; ירידה שבועית 5–8%</li>
+            <li>Strait of Hormuz · IEA "Red Zone" עד יולי</li>
+            <li>"Optionality" — אם השיחות יקרסו</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>8 · Enterprise SaaS / AI Agents</h4><span class="badge b-med">MED</span></div>
+          <ul>
+            <li>CRM Agentforce + Slack — מבחן ARR/Margin</li>
+            <li>WDAY כבר היכה; ADSK חמישי</li>
+            <li>צוואר: עליות מכסים, תחרות AI</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>9 · Quantum Computing</h4><span class="badge b-low">LOW–MED</span></div>
+          <ul>
+            <li>$2B מהממשל הפדרלי ל־IBM ואחרים</li>
+            <li>IBM, IONQ, RGTI, QBTS, QTEX</li>
+            <li>נרטיב חזק · ביצוע חלש · ספקולציה</li>
+          </ul>
+        </div>
+
+        <div class="theme-card">
+          <div class="tc-head"><h4>10 · Industrial Rotation / Equal-Weight</h4><span class="badge b-high">HIGH</span></div>
+          <ul>
+            <li>RSP מוביל את SPY ~5pp YTD</li>
+            <li>תעשייתי 16%, פיננסיים 15% מ־RSP</li>
+            <li>Quanta, Caterpillar, Eaton, Howmet</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 6 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">06 / 16</div><h2>שרשרת ערך — Upstream → Midstream → Downstream</h2></div>
+      <span class="sec-tag">Where Value Is Captured</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>טריטוריה</th><th>Upstream</th><th>Midstream</th><th>Downstream</th><th>איפה נתפס הערך</th></tr></thead>
+        <tbody>
+        <tr>
+          <td><strong>AI Power / Grid</strong></td>
+          <td>נחושת (FCX), פלדה, רכוז GOES, סיליקון</td>
+          <td><strong>GEV, ETN, ABB, Prolec, HUBB</strong> — טרנספורמטורים, switchgear</td>
+          <td>Vistra, NextEra, Constellation, Hyperscalers</td>
+          <td><strong>Midstream</strong> — pricing power, lead times &gt;2Y</td>
+        </tr>
+        <tr>
+          <td><strong>AI Compute</strong></td>
+          <td>TSMC, ASML, AMAT, LRCX</td>
+          <td><strong>NVDA, AMD, AVGO, MRVL</strong> · MU, SK</td>
+          <td>MSFT, GOOGL, META, AMZN</td>
+          <td>NVDA + Memory; AVGO+MRVL סחרור</td>
+        </tr>
+        <tr>
+          <td><strong>Defense</strong></td>
+          <td>Howmet (HWM); Carpenter (CRS); Aerojet</td>
+          <td><strong>LMT, RTX, NOC, GD, LHX, ESLT, BA</strong></td>
+          <td>צבאות (US DoD, NATO, ישראל)</td>
+          <td>Upstream (HWM) — מחסור; Mid (LMT) — backlog</td>
+        </tr>
+        <tr>
+          <td><strong>Nuclear</strong></td>
+          <td><strong>CCJ, NXE, UEC, UUUU, LEU</strong></td>
+          <td>Westinghouse (CCJ), BWXT, GE Hitachi</td>
+          <td>CEG, VST, NEE, OKLO, NNE</td>
+          <td>Upstream (Cameco) + Mid (BWXT)</td>
+        </tr>
+        <tr>
+          <td><strong>Cooling</strong></td>
+          <td>נחושת, אלומיניום</td>
+          <td><strong>VRT, MOD, ETN (Boyd), Schneider</strong></td>
+          <td>Hyperscalers, Colocation (EQIX, DLR)</td>
+          <td>Midstream (VRT, MOD pure-play)</td>
+        </tr>
+        <tr>
+          <td><strong>Cybersecurity</strong></td>
+          <td>Threat Intel feeds (RPD, MNDT)</td>
+          <td><strong>CRWD, PANW, ZS, S, FTNT, NET</strong></td>
+          <td>Enterprise + Gov + MSSPs</td>
+          <td>Mid — שולי SaaS &gt; 80%</td>
+        </tr>
+        <tr>
+          <td><strong>Oil / Energy</strong></td>
+          <td>E&amp;P — XOM, CVX, OXY, COP, EOG</td>
+          <td>Midstream — ET, EPD, MPLX, ENB</td>
+          <td>Refiners — VLO, MPC, PSX</td>
+          <td>Upstream בטנשן Geo; Refiners ב־crack פתוח</td>
+        </tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 7 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">07 / 16</div><h2>זיהוי צווארי בקבוק · Bottleneck Quality</h2></div>
+      <span class="sec-tag">Lead Times · Backlog · Pricing Power</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>טריטוריה</th><th>איכות צוואר</th><th>קושי ייצור</th><th>Lead times</th><th>Backlog</th><th>Pricing power</th><th>חסם כניסה</th></tr></thead>
+        <tbody>
+        <tr><td><strong>טרנספורמטורים / Switchgear</strong></td><td><span class="badge b-high">HIGH+</span></td><td>קיצוני</td><td><strong>&gt; 2 שנים</strong></td><td>$150B GEV</td><td>חזק מאוד</td><td>הסמכת UL + ניסיון תפעולי</td></tr>
+        <tr><td><strong>חלקי מנוע סילון / טורבינות</strong></td><td><span class="badge b-high">HIGH</span></td><td>מאוד גבוה</td><td>12–18 חודשים</td><td>HWM book-to-bill חזק</td><td>חזק</td><td>הסמכות FAA + מאסטר עיצובי</td></tr>
+        <tr><td><strong>Liquid Cooling Racks</strong></td><td><span class="badge b-high">HIGH</span></td><td>הנדסה מורכבת</td><td>12–18 חודשים</td><td>VRT $15B</td><td>בינוני־חזק</td><td>שותפות NVIDIA reference design</td></tr>
+        <tr><td><strong>HBM Memory (AI)</strong></td><td><span class="badge b-high">HIGH</span></td><td>קשה (3 ספקים)</td><td>בהזמנה מראש 2026/27</td><td>SK / MU גמורים</td><td>חזק</td><td>טכנולוגית stacking + capex עצום</td></tr>
+        <tr><td><strong>Defense Munitions / Missiles</strong></td><td><span class="badge b-high">HIGH</span></td><td>קיבולת מוגבלת</td><td>חודשי שנים</td><td>שיאי 80B+ ישראל; LMT $194B</td><td>חזק (חיצוני)</td><td>סוודי + אישורים ביטחוניים</td></tr>
+        <tr><td><strong>Uranium Conversion / Enrichment</strong></td><td><span class="badge b-high">HIGH</span></td><td>מוגבל ספקים</td><td>שנים</td><td>חוזים ארוכי טווח</td><td>חזק עם UL</td><td>רגולציה גרעינית</td></tr>
+        <tr><td><strong>AI ASIC Design (MRVL, AVGO)</strong></td><td><span class="badge b-med">MED–HIGH</span></td><td>גבוה</td><td>9–12 חודשים</td><td>MRVL $2.4B Q1 (+27% QoQ)</td><td>בינוני</td><td>קשרי שותפים hyperscaler</td></tr>
+        <tr><td><strong>Cybersecurity Software</strong></td><td><span class="badge b-med">MED</span></td><td>נמוך (SW)</td><td>—</td><td>CRWD ARR $4.4B</td><td>בינוני</td><td>switching costs + agent footprint</td></tr>
+        <tr><td><strong>Quantum Hardware</strong></td><td><span class="badge b-low">LOW</span></td><td>מחקרי / נעלם</td><td>—</td><td>—</td><td>—</td><td>נרטיב, לא ביצוע</td></tr>
+        <tr><td><strong>Oil E&amp;P (US)</strong></td><td><span class="badge b-med">MED</span></td><td>קל לפתוח קידוחים</td><td>3–6 חודשים</td><td>—</td><td>חלש (סחורה)</td><td>חסם נמוך־בינוני</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout">
+        <b>צוואר הבקבוק האיכותי ביותר השבוע:</b> טרנספורמטורים &amp; Medium-Voltage Switchgear. Lead time &gt;2 שנים, ביקוש מואץ, החלפת ספק בלתי אפשרית — ו־$2.4B הזמנות במחיר אחד ל־GEV מה־data centers ברבעון אחד עולה על כל 2025.
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 8 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">08 / 16</div><h2>שמות ליבה + Alpha · ישיר מול נרטיב</h2></div>
+      <span class="sec-tag">Direct Exposure vs Trap</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>טריטוריה</th><th>שמות ליבה</th><th>Alpha / מתחת לרדאר</th><th>הכי ישיר לקטליזטור</th><th>מלכודת נרטיב</th></tr></thead>
+        <tbody>
+        <tr><td>AI Power / Grid</td><td><code class="tk">GEV</code> <code class="tk">ETN</code> <code class="tk">VRT</code> <code class="tk">PWR</code></td><td><code class="tk">HUBB</code> <code class="tk">ATKR</code> <code class="tk">POWL</code> <code class="tk">PRIM</code></td><td><code class="tk">GEV</code> — backlog יחיד בענף</td><td><code class="tk">VST</code> 72× — PPAs רובו לא חתום</td></tr>
+        <tr><td>AI Compute</td><td><code class="tk">NVDA</code> <code class="tk">AVGO</code> <code class="tk">MRVL</code> <code class="tk">AMD</code></td><td><code class="tk">CRDO</code> <code class="tk">ALAB</code> <code class="tk">COHR</code> <code class="tk">LITE</code></td><td><code class="tk">MRVL</code> דוח WED — AI ASIC</td><td>"AI הכל" — Crowded post-NVDA</td></tr>
+        <tr><td>Cooling</td><td><code class="tk">VRT</code> <code class="tk">MOD</code> <code class="tk">ETN</code></td><td><code class="tk">SMCI</code> <code class="tk">FLS</code></td><td><code class="tk">MOD</code> דוח TUE — pure-play</td><td>SMCI — אמינות חשבונאית</td></tr>
+        <tr><td>Defense</td><td><code class="tk">LMT</code> <code class="tk">RTX</code> <code class="tk">NOC</code> <code class="tk">GD</code> <code class="tk">ESLT</code></td><td><code class="tk">HWM</code> <code class="tk">CRS</code> <code class="tk">KTOS</code> <code class="tk">AVAV</code></td><td><code class="tk">ESLT</code> דוח TUE</td><td><code class="tk">PLTR</code> — שווי 246% עודף ל־LMT</td></tr>
+        <tr><td>Nuclear / Uranium</td><td><code class="tk">CCJ</code> <code class="tk">CEG</code> <code class="tk">VST</code> <code class="tk">LEU</code></td><td><code class="tk">BWXT</code> <code class="tk">OKLO</code> <code class="tk">NNE</code> <code class="tk">NXE</code></td><td><code class="tk">CCJ</code> — שולט בשרשרת</td><td><code class="tk">OKLO</code>/<code class="tk">NNE</code> — שנים מהכנסות</td></tr>
+        <tr><td>Cybersecurity</td><td><code class="tk">CRWD</code> <code class="tk">PANW</code> <code class="tk">ZS</code></td><td><code class="tk">S</code> · <code class="tk">RBRK</code> · <code class="tk">CYBR</code></td><td><code class="tk">CRWD</code> דוח THU</td><td><code class="tk">CRWD</code> — DOJ/SEC inquiry פתוח</td></tr>
+        <tr><td>Energy</td><td><code class="tk">XOM</code> <code class="tk">CVX</code> <code class="tk">COP</code> <code class="tk">OXY</code></td><td><code class="tk">VLO</code> <code class="tk">MPC</code> · <code class="tk">EQT</code></td><td><code class="tk">VLO</code> — crack פתוח</td><td>"Iran Deal" — נפילה אם יחתמו</td></tr>
+        <tr><td>Enterprise SaaS</td><td><code class="tk">CRM</code> <code class="tk">ADSK</code> <code class="tk">NOW</code> <code class="tk">DELL</code></td><td><code class="tk">PSTG</code> <code class="tk">SNOW</code> <code class="tk">MDB</code> <code class="tk">DDOG</code></td><td><code class="tk">DELL</code> דוח WED</td><td><code class="tk">CRM</code> — Starbucks AI scrap</td></tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 9 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">09 / 16</div><h2>עדויות יסוד · Backlog · Orders · Guidance</h2></div>
+      <span class="sec-tag">Fundamentals That Matter Now</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ticker</th><th>Rev Growth</th><th>FCF / Margin</th><th>Backlog</th>
+            <th>Guidance</th><th>הערה דסק</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="ticker">GEV</td>
+          <td>+16% Q1 ('26)</td>
+          <td>Segment EBITDA 17.8% (+670bps)</td>
+          <td><strong>$150B שיא;</strong> Electrification BB ~2.5</td>
+          <td>Raised 2026; 110 GW gas turbine</td>
+          <td>הסיפור הנקי ביותר ב־AI Power</td>
+        </tr>
+        <tr>
+          <td class="ticker">VRT</td>
+          <td>+23% Q1</td>
+          <td>EPS +83% · Op margin 20.8% · FCF $1.9B</td>
+          <td><strong>$15B</strong></td>
+          <td>2026 Rev $13.25–13.75B · EPS $5.97–6.07</td>
+          <td>~46× P/E — מתוח אבל מוצדק</td>
+        </tr>
+        <tr>
+          <td class="ticker">ETN</td>
+          <td>Electrical Americas +21%</td>
+          <td>Backlog $15.5B; DC +35%</td>
+          <td>Boyd Thermal $9.5B</td>
+          <td>"Unprecedented demand"</td>
+          <td>פחות מתוח מ־VRT</td>
+        </tr>
+        <tr>
+          <td class="ticker">MOD</td>
+          <td>DC +78% YoY</td>
+          <td>—</td>
+          <td>—</td>
+          <td>FY26 +15–20% raised</td>
+          <td>דוח TUE 26 — קטליזטור ישיר</td>
+        </tr>
+        <tr>
+          <td class="ticker">NVDA</td>
+          <td>+85% YoY (Q1 FY27)</td>
+          <td>GAAP margin 74.9% · ~$20B החזר הון</td>
+          <td>—</td>
+          <td>Q2 $91B ± 2%; <strong>+$80B buyback</strong></td>
+          <td>פוסט־ראלי; קונסולידציה</td>
+        </tr>
+        <tr>
+          <td class="ticker">MRVL</td>
+          <td>Q1 FY27 $2.40B (+27% QoQ)</td>
+          <td>—</td>
+          <td>AI ASIC ל־hyperscalers</td>
+          <td>EPS $0.74–0.84 (mid &gt; consensus)</td>
+          <td>דוח WED 27 — Mover</td>
+        </tr>
+        <tr>
+          <td class="ticker">CCJ</td>
+          <td>2025 Rev $3.48B (+11%)</td>
+          <td>NI +243% YoY · 16.9%</td>
+          <td>חוזים ארוכי טווח</td>
+          <td>2026 production 19.5–21.5M lbs</td>
+          <td>125× P/E — אופציה ארוכת טווח</td>
+        </tr>
+        <tr>
+          <td class="ticker">CRWD</td>
+          <td>ARR +22% to $4.44B</td>
+          <td>FCF $279M · retention 97%</td>
+          <td>RPO $6.07B</td>
+          <td>FY26 EPS $3.44–3.56</td>
+          <td>דוח THU 28 · DOJ/SEC inquiry פתוח</td>
+        </tr>
+        <tr>
+          <td class="ticker">ESLT</td>
+          <td>FY25 Rev $7.94B; TTM +25%</td>
+          <td>Q3 FCF &gt;$500M</td>
+          <td><strong>$28.1B</strong> שיא; 69% חו״ל</td>
+          <td>PULS $750M; Army $212M; Merkava $210M</td>
+          <td>דוח TUE 26 · P/E ~53×</td>
+        </tr>
+        <tr>
+          <td class="ticker">RTX</td>
+          <td>Q1 +9% organic</td>
+          <td>FCF $1.3B Q1; YE $8.25–8.75B</td>
+          <td><strong>$271B</strong></td>
+          <td>Raised: Rev $92.5–93.5B</td>
+          <td>בייסליין ההגנה</td>
+        </tr>
+        <tr>
+          <td class="ticker">LMT</td>
+          <td>2026 +5% organic</td>
+          <td>EPS $29.35–30.25 (+38.5% YoY)</td>
+          <td>$194B (~2.5 שנים)</td>
+          <td>Capex/R&amp;D +35% to $5B</td>
+          <td>17× forward · "Golden Dome prime"</td>
+        </tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 10 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">10 / 16</div><h2>מומנטום · פעולת מחיר · Crowding</h2></div>
+      <span class="sec-tag">Breadth · Relative Strength</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="callout"><b>קונטקסט שוק:</b> 8 שבועות רצופים ב־S&amp;P; 132 שיאי 52W ביום שישי; RSP מוביל את SPY ב־~5pp YTD. הרוטציה רחבה אך הצפיפות מתחילה להופיע בשמות AI Infrastructure.</div>
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>שם</th><th>Trend</th><th>קרבה ל־52W</th><th>RS מול S&amp;P</th><th>סיכון צפיפות</th><th>Note</th></tr></thead>
+        <tbody>
+        <tr><td><code class="tk">GEV</code></td><td>HH/HL בולט</td><td>קרוב מאוד</td><td>חזק</td><td>בינוני</td><td>קונסולידציה בריאה מעל 50DMA</td></tr>
+        <tr><td><code class="tk">VRT</code></td><td>~4× ב־12M; שטוח לאחרונה</td><td>קרוב</td><td>חזק post-Q1</td><td>גבוה</td><td>טריגר breakout מעל $236</td></tr>
+        <tr><td><code class="tk">ETN</code></td><td>איטי אבל הולך</td><td>קרוב</td><td>בינוני</td><td>נמוך</td><td>"שקט אחרי VRT"</td></tr>
+        <tr><td><code class="tk">MRVL</code></td><td>זוחל לפני דוח</td><td>סביר</td><td>בינוני</td><td>בינוני</td><td>Pre-earnings drift קלאסי</td></tr>
+        <tr><td><code class="tk">NVDA</code></td><td>פוסט דוח · קונסולידציה</td><td>קרוב</td><td>חלוש פוסט</td><td>מקסימלי</td><td>"Sell-the-News"; טוב לטווח</td></tr>
+        <tr><td><code class="tk">ARM</code></td><td>+50% שבוע — קיצוני</td><td>ATH</td><td>חזק קיצוני</td><td><strong>גבוה מאוד</strong></td><td>פולבק סביר</td></tr>
+        <tr><td><code class="tk">CCJ</code></td><td>קונסולידציה</td><td>סביר</td><td>בינוני</td><td>בינוני</td><td>פתיחה גבוהה ועוד מקום</td></tr>
+        <tr><td><code class="tk">VST</code></td><td>צפוף; כמעט פאראבולי</td><td>קרוב</td><td>חזק</td><td><strong>קיצוני</strong></td><td>pullback risk גבוה</td></tr>
+        <tr><td><code class="tk">CRWD</code></td><td>שיא 52W $666; +47% YoY</td><td>ATH</td><td>חזק</td><td>גבוה</td><td>"מומנטום פוגש דוח"</td></tr>
+        <tr><td><code class="tk">LMT</code></td><td>איטי; פיגור relative</td><td>~8% מ־ATH</td><td>חלש relative</td><td><strong>נמוך</strong></td><td>17× forward זול</td></tr>
+        <tr><td><code class="tk">ESLT</code></td><td>+115% 12M; קונסולידציה</td><td>קרוב</td><td>חזק</td><td>גבוה</td><td>דוח 26·MAY — Sink-or-Swim</td></tr>
+        <tr><td><code class="tk">RSP</code></td><td>HH/HL ברור</td><td>קרוב לשיא</td><td>מוביל את SPY</td><td>נמוך</td><td>סיגנל רוטציה אמיתי</td></tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 11 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">11 / 16</div><h2>תמחור · צפיפות · ציפיות</h2></div>
+      <span class="sec-tag">Multiples · Embedded Growth</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Ticker</th><th>Fwd P/E</th><th>vs Peers</th><th>Crowding</th><th>הערה דסק</th></tr></thead>
+        <tbody>
+        <tr><td class="ticker">GEV</td><td>גבוה אך מוצדק על backlog</td><td>שווה־ערך פרימיום</td><td>בינוני</td><td>Multiple expansion עוד אפשרי</td></tr>
+        <tr><td class="ticker">VRT</td><td>~39–46×</td><td>יקר מ־ETN</td><td><strong>גבוה</strong></td><td>PEG ~1.07 — דורש ביצוע</td></tr>
+        <tr><td class="ticker">ETN</td><td>26×–32×</td><td>זול יחסית ל־VRT</td><td>בינוני</td><td>"שקטים אבל קלאסיים"</td></tr>
+        <tr><td class="ticker">VST</td><td>~72× trailing</td><td>פרימיום קיצוני</td><td><strong>קיצוני</strong></td><td>תלוי PPAs לא חתומים</td></tr>
+        <tr><td class="ticker">CCJ</td><td>P/E ~125×</td><td>פרימיום מוצדק</td><td>בינוני</td><td>סיפור 5–10 שנים</td></tr>
+        <tr><td class="ticker">NVDA</td><td>~32–35×</td><td>פרימיום סביר</td><td>גבוה</td><td>+$80B buyback פלוס</td></tr>
+        <tr><td class="ticker">PLTR</td><td>קיצוני × עשרות</td><td>פרימיום ענק vs LMT</td><td><strong>קיצוני</strong></td><td>Burry short bolt-on; tail risk</td></tr>
+        <tr><td class="ticker">ESLT</td><td>~53×</td><td>פרימיום מול US peers</td><td>גבוה</td><td>דורש תרגום backlog</td></tr>
+        <tr><td class="ticker">LMT</td><td><strong>~17× forward</strong></td><td>הזול בענף</td><td>נמוך</td><td>דיב 2.78% · ערך נסתר</td></tr>
+        <tr><td class="ticker">RTX</td><td>~22×</td><td>פרימיום נמוך</td><td>נמוך</td><td>Compounding · backlog נקי</td></tr>
+        <tr><td class="ticker">CRWD</td><td>P/S ~25×+</td><td>פרימיום מול PANW</td><td><strong>קיצוני</strong></td><td>דורש execution מושלם</td></tr>
+        <tr><td class="ticker">CRM</td><td>22–25×</td><td>זול יחסית בקבוצה</td><td>בינוני</td><td>Agentforce חייב שולים</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout"><b>Read:</b> רבים מהשמות הצפופים (VRT, ARM, VST, CRWD, PLTR) מתחילים את השבוע בתמחור שדורש <strong>ביצוע מושלם</strong>. ה־"ערך הזול" של השבוע — LMT, ETN, RTX — נשארים לא צפופים. RSP פתוח להמשך אם PCE רך.</div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 12 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">12 / 16</div><h2>טבלת דסק שבועית · All Themes</h2></div>
+      <span class="sec-tag">Single View</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>טריטוריה</th>
+            <th>למה עכשיו</th>
+            <th>צוואר מרכזי</th>
+            <th>ליבה</th>
+            <th>אלפא</th>
+            <th>קטליזטור</th>
+            <th>גישה</th>
+            <th>Score</th>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>AI Power / Grid</strong></td>
+          <td>Capex $725B; GEV $18.3B Q1; lead time &gt;2Y</td>
+          <td>טרנספורמטורים</td>
+          <td><code class="tk">GEV</code> <code class="tk">ETN</code> <code class="tk">VRT</code> <code class="tk">PWR</code></td>
+          <td><code class="tk">HUBB</code> <code class="tk">POWL</code></td>
+          <td>MOD TUE; backlog flow</td>
+          <td>BUY Pullbacks</td>
+          <td><strong>8.8</strong></td>
+          <td><span class="badge b-buy">HIGH CONVICTION LONG</span></td>
+        </tr>
+        <tr>
+          <td><strong>Defense / Rearmament</strong></td>
+          <td>$1.5T FY27; Golden Dome; ESLT 28B+</td>
+          <td>חלקי טורבינה</td>
+          <td><code class="tk">LMT</code> <code class="tk">RTX</code> <code class="tk">NOC</code> <code class="tk">ESLT</code></td>
+          <td><code class="tk">HWM</code> <code class="tk">CRS</code> <code class="tk">KTOS</code></td>
+          <td>ESLT TUE 26 ★</td>
+          <td>Add LMT 17×; HOLD ESLT</td>
+          <td><strong>8.5</strong></td>
+          <td><span class="badge b-buy">HIGH CONVICTION LONG</span></td>
+        </tr>
+        <tr>
+          <td><strong>Data Center Cooling</strong></td>
+          <td>VRT $15B · MOD +78%; ETN/Boyd $9.5B</td>
+          <td>Liquid cooling racks</td>
+          <td><code class="tk">VRT</code> <code class="tk">MOD</code> <code class="tk">ETN</code></td>
+          <td><code class="tk">FLS</code></td>
+          <td>MOD TUE 26</td>
+          <td>BUY MOD חולשה</td>
+          <td><strong>8.3</strong></td>
+          <td><span class="badge b-buy">TACTICAL LONG</span></td>
+        </tr>
+        <tr>
+          <td><strong>AI Compute</strong></td>
+          <td>NVDA confirmed; MRVL ramp</td>
+          <td>HBM Memory</td>
+          <td><code class="tk">NVDA</code> <code class="tk">AVGO</code> <code class="tk">MRVL</code></td>
+          <td><code class="tk">CRDO</code> <code class="tk">ALAB</code> <code class="tk">MU</code></td>
+          <td>MRVL WED 27</td>
+          <td>HOLD; ADD MRVL drift</td>
+          <td><strong>8.0</strong></td>
+          <td><span class="badge b-buy">TACTICAL LONG</span></td>
+        </tr>
+        <tr>
+          <td><strong>Industrial Rotation</strong></td>
+          <td>RSP מוביל SPY 5pp; XLI 16% RSP</td>
+          <td>EPC capacity</td>
+          <td><code class="tk">PWR</code> <code class="tk">CAT</code> <code class="tk">EMR</code></td>
+          <td><code class="tk">MTZ</code> <code class="tk">PRIM</code></td>
+          <td>PCE THU 28</td>
+          <td>BUY רוטציה אם PCE רך</td>
+          <td><strong>7.8</strong></td>
+          <td><span class="badge b-buy">CORE LONG</span></td>
+        </tr>
+        <tr>
+          <td><strong>Nuclear / Uranium</strong></td>
+          <td>CCJ beat 30%; PT $175</td>
+          <td>Enrichment</td>
+          <td><code class="tk">CCJ</code> <code class="tk">CEG</code></td>
+          <td><code class="tk">BWXT</code> <code class="tk">LEU</code></td>
+          <td>—</td>
+          <td>HOLD CCJ; AVOID VST</td>
+          <td><strong>7.0</strong></td>
+          <td><span class="badge b-watch">ACTIVE WATCHLIST</span></td>
+        </tr>
+        <tr>
+          <td><strong>Cybersecurity</strong></td>
+          <td>CRWD ARR $4.4B</td>
+          <td>אינטגרציה</td>
+          <td><code class="tk">CRWD</code> <code class="tk">PANW</code></td>
+          <td><code class="tk">S</code> <code class="tk">CYBR</code></td>
+          <td>CRWD THU 28</td>
+          <td>WAIT</td>
+          <td><strong>6.5</strong></td>
+          <td><span class="badge b-watch">CROWDED · NEEDS PULLBACK</span></td>
+        </tr>
+        <tr>
+          <td><strong>Oil / Energy</strong></td>
+          <td>Brent $100; "Iran Deal" סיכון בינארי</td>
+          <td>Refining crack</td>
+          <td><code class="tk">XOM</code> <code class="tk">CVX</code></td>
+          <td><code class="tk">VLO</code> <code class="tk">EQT</code></td>
+          <td>US–איראן</td>
+          <td>Pair: VLO/XOM</td>
+          <td><strong>5.8</strong></td>
+          <td><span class="badge b-watch">MONITOR</span></td>
+        </tr>
+        <tr>
+          <td><strong>Enterprise SaaS</strong></td>
+          <td>Agentforce מבחן; DELL AI backlog</td>
+          <td>—</td>
+          <td><code class="tk">CRM</code> <code class="tk">DELL</code></td>
+          <td><code class="tk">PSTG</code> <code class="tk">MDB</code></td>
+          <td>WED 27</td>
+          <td>WAIT</td>
+          <td><strong>5.5</strong></td>
+          <td><span class="badge b-watch">MONITOR</span></td>
+        </tr>
+        <tr>
+          <td><strong>Quantum</strong></td>
+          <td>$2B מהממשל</td>
+          <td>—</td>
+          <td><code class="tk">IBM</code></td>
+          <td><code class="tk">IONQ</code> <code class="tk">RGTI</code></td>
+          <td>CHIPS announce</td>
+          <td>AVOID</td>
+          <td><strong>4.0</strong></td>
+          <td><span class="badge b-avoid">AVOID / NOISE</span></td>
+        </tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 13 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">13 / 16</div><h2>מודל ניקוד · Weighted Composite</h2></div>
+      <span class="sec-tag">1–10 Scoring</span>
+    </div>
+    <div class="sec-body">
+
+      <p style="margin-bottom:14px;color:var(--muted);font-size:13px;">משקלות: Catalyst 20% · Bottleneck 20% · Capital Flow 15% · Earnings/Backlog 15% · Under-Radar 10% · Fundamentals 10% · Valuation 10%.</p>
+
+      <div>
+        <div class="score-row"><div class="score-label">AI Power / Grid Infrastructure</div><div class="score-num">8.8</div><div class="score-bar"><i style="width:88%"></i></div></div>
+        <div class="score-row"><div class="score-label">Defense / Rearmament</div><div class="score-num">8.5</div><div class="score-bar"><i style="width:85%"></i></div></div>
+        <div class="score-row"><div class="score-label">Data Center Cooling</div><div class="score-num">8.3</div><div class="score-bar"><i style="width:83%"></i></div></div>
+        <div class="score-row"><div class="score-label">AI Compute</div><div class="score-num">8.0</div><div class="score-bar"><i style="width:80%"></i></div></div>
+        <div class="score-row"><div class="score-label">Industrial Rotation / Equal-Weight</div><div class="score-num">7.8</div><div class="score-bar"><i style="width:78%"></i></div></div>
+        <div class="score-row"><div class="score-label">Nuclear / Uranium</div><div class="score-num">7.0</div><div class="score-bar"><i style="width:70%"></i></div></div>
+        <div class="score-row"><div class="score-label">Cybersecurity</div><div class="score-num">6.5</div><div class="score-bar"><i style="width:65%"></i></div></div>
+        <div class="score-row"><div class="score-label">Oil / Energy</div><div class="score-num">5.8</div><div class="score-bar"><i style="width:58%"></i></div></div>
+        <div class="score-row"><div class="score-label">Enterprise SaaS / AI Agents</div><div class="score-num">5.5</div><div class="score-bar"><i style="width:55%"></i></div></div>
+        <div class="score-row"><div class="score-label">Quantum Computing</div><div class="score-num">4.0</div><div class="score-bar"><i style="width:40%"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 14 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">14 / 16</div><h2>רשימת השקעה סופית · Action-Ready</h2></div>
+      <span class="sec-tag">Buy / Trade / Watch / Avoid</span>
+    </div>
+    <div class="sec-body">
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;color:var(--primary);font-size:17px;margin:0 0 8px;">Core Long Ideas</h3>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>שם</th><th>למה עכשיו</th><th>טריגר כניסה</th><th>קטליזטור</th><th>ביטול תזה</th><th>אופק</th></tr></thead>
+        <tbody>
+        <tr><td class="ticker">GEV</td><td>backlog $150B; lead time &gt;2Y</td><td>חולשה ל־50DMA</td><td>הזמנות DC חדשות</td><td>קיצוץ Capex hyperscaler</td><td>12–24M · <strong>Enter on pullback</strong></td></tr>
+        <tr><td class="ticker">LMT</td><td>17× FW · $194B backlog</td><td>תיקון $470–$485</td><td>Q2 + F-35</td><td>קיצוץ DoD</td><td>18–36M · <strong>Enter now</strong></td></tr>
+        <tr><td class="ticker">RTX</td><td>$271B backlog; raised guide</td><td>כל חולשה</td><td>Q2 דוח</td><td>בעיה ב־Pratt</td><td>12–24M · <strong>Enter now</strong></td></tr>
+        <tr><td class="ticker">ETN</td><td>$15.5B backlog; Boyd $9.5B</td><td>פולבק $355–365</td><td>Q2 דוח</td><td>נורמליזציה DC demand</td><td>12–24M · <strong>Wait pullback</strong></td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;color:var(--primary);font-size:17px;margin:18px 0 8px;">Tactical Momentum</h3>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>שם</th><th>למה עכשיו</th><th>טריגר</th><th>קטליזטור</th><th>Action</th></tr></thead>
+        <tbody>
+        <tr><td class="ticker">MOD</td><td>Pure-play AI cooling; +78% YoY</td><td>בריקאוט לפני דוח</td><td>TUE 26·MAY</td><td><strong>Pre-earnings drift</strong></td></tr>
+        <tr><td class="ticker">MRVL</td><td>AI ASIC; guide +27% QoQ</td><td>פתיחה ללא גאפ</td><td>WED 27·MAY</td><td><strong>Pre-earnings drift</strong></td></tr>
+        <tr><td class="ticker">ESLT</td><td>$28.1B שיא; +115% 12M</td><td>גאפ Down פוסט־דוח</td><td>TUE 26·MAY</td><td><strong>Monitor — קנו על חולשה</strong></td></tr>
+        <tr><td class="ticker">HWM</td><td>חלקי טורבינה — מחסור</td><td>פולבק כללי</td><td>הזמנות צבא + LMT</td><td><strong>Add on weakness</strong></td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;color:var(--primary);font-size:17px;margin:18px 0 8px;">Pair Trade Ideas</h3>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Pair</th><th>Setup</th><th>Thesis</th></tr></thead>
+        <tbody>
+        <tr><td><strong>Long GEV / Short VST</strong></td><td>Equipment vs Power Host</td><td>GEV backlog ממומש; VST 72× PPAs לא חתומים</td></tr>
+        <tr><td><strong>Long LMT / Short PLTR</strong></td><td>Defense — Hardware vs Hype</td><td>LMT 17× זול; PLTR פרימיום קיצוני; Burry short פתוח</td></tr>
+        <tr><td><strong>Long RSP / Short SPY</strong></td><td>רוטציה רחבה</td><td>הון מתחלק רחב; Industrials מובילים</td></tr>
+        <tr><td><strong>Long VLO / Short XOM</strong></td><td>Refining crack פתוח</td><td>נורמליזציה נפט + crack פתוח = refiners מנצחים</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 style="font-family:'Frank Ruhl Libre',serif;color:var(--red);font-size:17px;margin:18px 0 8px;">Avoid / Short Candidates</h3>
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>שם</th><th>סיבה</th></tr></thead>
+        <tbody>
+        <tr><td class="ticker">ARM</td><td>+50% שבוע — Crowded Long extreme</td></tr>
+        <tr><td class="ticker">VST</td><td>72× P/E · PPAs לא חתומים · סיכון בינארי</td></tr>
+        <tr><td class="ticker">PLTR</td><td>שווי 246% &gt; LMT; Burry short bolt-on</td></tr>
+        <tr><td class="ticker">Quantum (RGTI, QBTS, QTEX)</td><td>נרטיב, לא ביצוע · spec עם 60%+ פתיחה</td></tr>
+        <tr><td class="ticker">DLTR / קמעונאות חלשה</td><td>Univ. Michigan sentiment שפל</td></tr>
+        </tbody>
+      </table></div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 15 ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">15 / 16</div><h2>מפת סיכונים</h2></div>
+      <span class="sec-tag">Tail · Tape · Position</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>סיכון</th><th>סטטוס</th><th>טריגרים</th><th>פעולה</th></tr></thead>
+        <tbody>
+        <tr><td><strong>אינפלציה / PCE</strong></td><td><span class="badge b-watch">בולט</span></td><td>Core PCE &gt;0.3% MoM</td><td>הקטנת משך; energy מגן</td></tr>
+        <tr><td><strong>תשואות אג"ח</strong></td><td><span class="badge b-watch">גבוה</span></td><td>30Y &gt; 5% נמשך</td><td>שמירה Banks + Energy</td></tr>
+        <tr><td><strong>Fed (Powell exit)</strong></td><td><span class="badge b-watch">מגביה</span></td><td>מועמד Trump; דוט פלוט יוני</td><td>Hedge Gold</td></tr>
+        <tr><td><strong>נפט / Hormuz</strong></td><td><span class="badge b-watch">חי</span></td><td>קריסת שיחות US–איראן</td><td>XOM/VLO לקראת אסקלציה</td></tr>
+        <tr><td><strong>Capex AI מואט</strong></td><td><span class="badge b-med">בינוני</span></td><td>guide hyperscaler יורד</td><td>AVOID GEV/VRT אם מואט</td></tr>
+        <tr><td><strong>Crowding (ARM, VST, PLTR, CRWD)</strong></td><td><span class="badge b-avoid">קיצוני</span></td><td>Failed breakout, Vol Climax</td><td>Trim Crowded; Avoid New</td></tr>
+        <tr><td><strong>Execution (VRT, MRVL)</strong></td><td><span class="badge b-med">בינוני</span></td><td>guide miss / margin compression</td><td>Stop &gt; 7% פוסט־דוח</td></tr>
+        <tr><td><strong>תמחור SPX</strong></td><td><span class="badge b-watch">מתוח</span></td><td>Concentration 35.6% top 10</td><td>cash 10–15%</td></tr>
+        <tr><td><strong>גיאופוליטי</strong></td><td><span class="badge b-watch">חי</span></td><td>איראן · טייוואן · אוקראינה</td><td>Defense מתבסס</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout"><b>מה ישבור את התזה השבועית:</b> Core PCE Surprise &gt;0.3% MoM ביום חמישי 28·MAY → קריסת ציפיות לקיצוץ ביוני → 10Y &gt;4.75% → תיקון 4–6% עם פגיעה חזקה דווקא ב־Cyclicals שהובילו. תסריט הפוך: PCE רך (&lt;0.2% MoM) → המשך רוטציה רחבה ובריקאוט נקי ב־RSP.</div>
+
+    </div>
+  </section>
+
+
+  <!-- ============ SECTION 16 — VERDICT ============ -->
+  <section>
+    <div class="sec-head">
+      <div><div class="sec-num">16 / 16</div><h2>מסקנה חדה · Institutional Verdict</h2></div>
+      <span class="sec-tag">The One-Page Read</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>שאלה</th><th>תשובה</th></tr></thead>
+        <tbody>
+        <tr><td><strong>התמה הכי חזקה לשבוע</strong></td><td>AI Power &amp; Grid — backlog ממומש, lead time &gt;2Y, ביקוש מאומת ב־$725B</td></tr>
+        <tr><td><strong>איפה הכסף זורם</strong></td><td>אל ה־"Picks &amp; Shovels הפיזיים" — GEV, ETN, VRT, MOD, HWM, LMT, RTX</td></tr>
+        <tr><td><strong>איפה הכסף יוצא</strong></td><td>מ־Crowded AI Mega-Caps (ARM, PLTR), PPA חלומיים (VST), Consumer חלשים</td></tr>
+        <tr><td><strong>הסקטור המועדף</strong></td><td>תעשייתי (XLI) ו־Defense — מימוש backlog</td></tr>
+        <tr><td><strong>צוואר הבקבוק האיכותי</strong></td><td>טרנספורמטורים &amp; MV Switchgear — 2Y+ lead time</td></tr>
+        <tr><td><strong>Top 3 Stocks</strong></td><td><code class="tk">GEV</code> · <code class="tk">LMT</code> · <code class="tk">MOD</code></td></tr>
+        <tr><td><strong>Top 3 Options Plays</strong></td><td>MRVL Bull Call Spread · SPY Bear Put Hedge · LMT Cash Secured Put</td></tr>
+        <tr><td><strong>מלכודות להימנע</strong></td><td><code class="tk">ARM</code> · <code class="tk">VST</code> · <code class="tk">PLTR</code> · Quantum specs</td></tr>
+        <tr><td><strong>מה ישנה את המסקנה</strong></td><td>PCE THU 28·MAY · אם &gt;0.3% MoM → התזה נשברת תוך 48 שעות</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="verdict">
+        <h3>VERDICT — שורת הסיום</h3>
+        <p style="margin:0;font-size:15px;line-height:1.7;">
+        השוק נכנס לשבוע אחרי 8 ברציפות עם <strong>Selective Risk-On</strong> ורוטציה ברורה אל החומרה הפיזית של ה־AI Build-out. הקטליסטים השבוע — Elbit (TUE), Modine (TUE), Marvell+CRM+DELL (WED), CrowdStrike+Costco (THU) — אבל הכל ייעלם אם ה־<span style="color:var(--primary);font-weight:700;">Core PCE ביום חמישי מפתיע למעלה</span>. הדסק ממשיך LONG את ה־<strong>"Equipment Makers"</strong> (GEV, ETN, LMT, RTX, MOD, HWM) על חשבון "Narrative Plays" (VST, ARM, PLTR, Quantum). באופציות — Bull Call Spreads על דוחות (MRVL), Iron Condors על IV מוקצן (CRWD), Cash Secured Puts על שמות ערך (LMT, GEV), ו־Bear Put Spread קטן על SPY כביטוח PCE. הגישה: <strong>"Buy the Backlog, Sell the Narrative, Hedge the Macro."</strong>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>
+    <div>WEEKLY CATALYST DESK · COMPILED 24·MAY·2026 · SUN 19:00 IDT · בלתי־רשמי לעיון בלבד</div>
+    <div class="src">
+      מקורות שוק עיקריים: Yahoo Finance &amp; CNBC (סגירות 22·MAY 16:45 ET); TradingEconomics; Federal Reserve; AAII; NAAIM; CME FedWatch; SEC filings (NVDA, GEV, RTX, Cameco, Elbit IR). <strong>אזהרה:</strong> אין להסתמך על נתונים אלו לעסקאות ללא ולידציה עצמאית. רעיונות אופציות הם דוגמאות חינוכיות; סטרייקים וקרדיטים אינדיקטיביים בלבד ויש לחשב מחדש במחירי שוק חיים. ניהול סיכון = רוב המשחק.
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // ===== THEME SWITCHER =====
+  (function(){
+    const root = document.documentElement;
+    const btns = document.querySelectorAll('.theme-btn');
+    const STORAGE_KEY = 'desk-theme';
+    const saved = localStorage.getItem(STORAGE_KEY) || 'cream';
+    applyTheme(saved);
+    btns.forEach(b => b.addEventListener('click', () => applyTheme(b.dataset.set)));
+    function applyTheme(name){
+      root.setAttribute('data-theme', name);
+      try { localStorage.setItem(STORAGE_KEY, name); } catch(e) {}
+      btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.set === name ? 'true' : 'false'));
+    }
+  })();
+</script>
+
+</body>
+</html>
