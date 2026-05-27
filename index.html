@@ -643,6 +643,137 @@
     .up { color:#006e3a !important; } .down { color:#a4001b !important; }
     code.tk { background:#fff5e0; border-color:#e0a800; color:#a76b00; }
   }
+
+  /* ===== STOCK DASHBOARD MODAL ===== */
+  .sm-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    align-items: flex-start; justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+  .sm-overlay.active { display: flex; }
+  .sm-modal {
+    background: #0b1721;
+    border: 1px solid #1d3552;
+    border-radius: 14px;
+    max-width: 700px;
+    width: 100%;
+    color: #e7ecf2;
+    font-family: "Rubik", "Assistant", sans-serif;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    margin: auto;
+  }
+  .sm-close {
+    position: absolute;
+    top: 14px; left: 14px;
+    width: 32px; height: 32px;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: #e7ecf2;
+    font-size: 18px; line-height: 1;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+  }
+  .sm-close:hover { background: rgba(255,255,255,0.18); }
+  .sm-header {
+    background: linear-gradient(90deg, #91d75f 0%, #5fb24a 100%);
+    padding: 14px 56px 14px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #08160e;
+    border-radius: 14px 14px 0 0;
+    position: relative;
+    text-align: center;
+  }
+  .sm-header.no-data { background: linear-gradient(90deg, #4a6f8a 0%, #2a4a60 100%); color: #fff; }
+  .sm-header .sm-period {
+    font-size: 12.5px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0.85;
+    line-height: 1.3;
+  }
+  .sm-header .sm-logo {
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    line-height: 1.1;
+  }
+  .sm-pill {
+    display: inline-block;
+    background: rgba(255, 216, 77, 0.14);
+    color: #ffd84d;
+    border: 1px solid rgba(255, 216, 77, 0.45);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 700;
+    font-family: "Rubik", "Assistant", sans-serif;
+    margin: 0 0 14px;
+    letter-spacing: 0;
+  }
+  .sm-body { padding: 18px 20px 22px; }
+  .sm-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+  .sm-kpi { background: #11202e; border: 1px solid #1d3552; border-radius: 10px; padding: 12px 10px; text-align: center; }
+  .sm-kpi .sm-kpi-label { font-size: 12px; color: #6ec48e; font-weight: 600; margin-bottom: 4px; }
+  .sm-kpi .sm-kpi-value { font-family: "JetBrains Mono", "Rubik", "Assistant", monospace; font-size: 20px; font-weight: 800; color: #fff; line-height: 1.1; }
+  .sm-kpi .sm-kpi-yoy { font-size: 11px; margin-top: 3px; color: #5dd882; font-weight: 600; }
+  .sm-kpi .sm-kpi-vs { font-size: 10px; color: #6c8a9e; border-top: 1px dashed #1d3552; margin-top: 5px; padding-top: 4px; }
+  .sm-section { background: #0e1c28; border: 1px solid #1d3552; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+  .sm-section h4 { color: #5dd882; font-size: 15px; font-weight: 700; margin: 0 0 10px; }
+  .sm-events { padding: 0; margin: 0; list-style: none; }
+  .sm-events li { position: relative; padding-right: 14px; margin-bottom: 9px; font-size: 13px; color: #d4dce6; line-height: 1.5; }
+  .sm-events li:last-child { margin-bottom: 0; }
+  .sm-events li:before { content: ''; position: absolute; right: 0; top: 6px; width: 7px; height: 7px; border-radius: 50%; background: #5dd882; }
+  .sm-events li.neg:before { background: #ff5d6e; }
+  .sm-events li.neu:before { background: #d4c43f; }
+  .sm-margins-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; gap: 8px; }
+  .sm-margins-row:last-child { margin-bottom: 0; }
+  .sm-margins-row .label { color: #5dd882; font-size: 12px; font-weight: 600; min-width: 60px; }
+  .sm-margins-row .bar { flex: 1; height: 5px; background: #1d3552; border-radius: 3px; overflow: hidden; }
+  .sm-margins-row .bar i { display: block; height: 100%; background: linear-gradient(90deg, #5fb24a, #91d75f); border-radius: 3px; }
+  .sm-margins-row .val { font-family: "JetBrains Mono", "Rubik", "Assistant", monospace; font-weight: 700; color: #fff; font-size: 13px; min-width: 50px; text-align: left; }
+  .sm-margins-row .yoy { font-size: 11px; color: #5dd882; min-width: 70px; text-align: left; font-weight: 600; }
+  .sm-ceo h4 { color: #5dd882; font-size: 14px; margin: 0 0 8px; display: flex; justify-content: space-between; align-items: baseline; }
+  .sm-ceo h4 .name { color: #93a5b6; font-size: 11px; font-weight: 500; }
+  .sm-ceo-quote { font-style: italic; color: #d4dce6; font-size: 13px; line-height: 1.6; border-right: 2px solid #5dd882; padding-right: 12px; }
+  .sm-guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .sm-guide-grid .box { background: #11202e; border: 1px solid #1d3552; border-radius: 8px; padding: 10px 8px; text-align: center; }
+  .sm-guide-grid .box .lbl { font-size: 11px; color: #5dd882; font-weight: 600; margin-bottom: 4px; }
+  .sm-guide-grid .box .val { font-family: "JetBrains Mono", "Rubik", "Assistant", monospace; font-weight: 700; color: #fff; font-size: 13px; }
+  .sm-guide-grid .box .vs { font-size: 9px; color: #6c8a9e; margin-top: 4px; }
+  .sm-no-data { background: #1f1a1c; border: 1px solid #4a2228; border-radius: 10px; padding: 18px; text-align: center; }
+  .sm-no-data p { color: #b8a8a8; font-size: 13px; line-height: 1.6; margin: 0 0 12px; }
+  .sm-no-data a { display: inline-block; margin: 4px; padding: 6px 12px; background: #11202e; border: 1px solid #1d3552; border-radius: 6px; color: #5dd882; text-decoration: none; font-size: 12px; font-weight: 600; }
+  .sm-no-data a:hover { background: #1d3552; color: #91d75f; }
+  code.tk { cursor: pointer; transition: opacity .15s, text-decoration .15s; }
+  code.tk:hover { opacity: 0.75; text-decoration: underline; }
+  td.ticker { cursor: pointer; transition: opacity .15s, text-decoration .15s; }
+  td.ticker:hover { opacity: 0.75; text-decoration: underline; }
+  @media (max-width: 720px) {
+    .sm-overlay { padding: 10px; align-items: flex-start; }
+    .sm-modal { max-width: 100%; }
+    .sm-body { padding: 14px; }
+    .sm-kpis { gap: 5px; }
+    .sm-kpi { padding: 9px 6px; }
+    .sm-kpi .sm-kpi-value { font-size: 16px; }
+    .sm-kpi .sm-kpi-label { font-size: 10px; }
+    .sm-header { padding: 14px 16px; }
+    .sm-header .sm-logo { font-size: 18px; }
+  }
 </style>
 </head>
 <body>
@@ -714,6 +845,37 @@
 
       <p><strong>מסקנת משטר:</strong> <span style="color:var(--primary);font-weight:700;">Selective Risk-On · Broadening Rotation</span>. השוק רץ 8 שבועות אך הריטייל הופך דובי (AAII bull 31.7%) בעוד שמנהלי NAAIM מקצצים חשיפה מ־96 ל־77 — דיברגנציה זהירה. תשואות 30Y מעל 5% ואינפלציה headline 3.8% מציבות סיכון. תזרים ההון <strong>אל הקבלן הפיזי של ה־AI</strong>, לא אל ה־platform. הון זורם לחומרה — Power, Grid, Cooling, Defense — יותר מאשר לחזון.</p>
 
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:22px 0 12px;">PCE Decision Tree · THU 28·MAY 08:30 ET</h3>
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>תרחיש</th><th>Core PCE MoM</th><th>תגובת שוק צפויה</th><th>פעולה</th></tr></thead>
+        <tbody>
+        <tr style="background: color-mix(in srgb, var(--green) 7%, transparent);">
+          <td><span class="badge b-buy">🟢 רך</span></td>
+          <td><strong>&lt; 0.20%</strong> MoM</td>
+          <td>רוטציה חזקה ל־cyclicals, Russell, REITs · 10Y יורד מתחת 4.45%</td>
+          <td><strong>BUY:</strong> RSP · IWM · GEV · MOD · LMT spreads<br><strong>CLOSE:</strong> SPY Bear Put Spread (סוגרים את הפוליסה)</td>
+        </tr>
+        <tr>
+          <td><span class="badge b-med">⚪ in-line</span></td>
+          <td><strong>0.20–0.28%</strong> MoM</td>
+          <td>תנודה רגילה · אין trigger גדול · 10Y שטוח סביב 4.55%</td>
+          <td><strong>HOLD:</strong> המשך תוכנית · אל תרחיב חשיפה · השאר ביטוח</td>
+        </tr>
+        <tr style="background: color-mix(in srgb, var(--red) 7%, transparent);">
+          <td><span class="badge b-avoid">🔴 חזק</span></td>
+          <td><strong>&gt; 0.30%</strong> MoM</td>
+          <td>תיקון 4–6% צפוי · 10Y &gt; 4.70% · Growth נפגע חזק · ה־cyclicals מתהפכים</td>
+          <td><strong>SELL:</strong> Russell, REITs, growth · <strong>BUY:</strong> XOM/VLO, cash, אג"ח קצר · ה־SPY Bear Put Spread משחק חזק</td>
+        </tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout" style="border-right-color: var(--blue); background: color-mix(in srgb, var(--blue) 7%, transparent);">
+        <b style="color:var(--blue);">למה זה הקטליזטור היחיד שחשוב השבוע:</b> Fed מסתכל על Core PCE כמדד מועדף. אחרי 8 שבועות ירוקים, AAII bull על 31.7% (דובי), VIX 16.7 (שקט) — השוק תמחר תרחיש in-line. כל חריגה — לכל כיוון — תפיל מומנטום או תזניק רוטציה ב־48 שעות.
+      </div>
+
     </div>
   </section>
 
@@ -733,9 +895,10 @@
         <tbody>
         <tr><td class="mono">20·MAY</td><td><strong>NVDA Q1 FY27:</strong> הכנסות $81.6B (+85% YoY), Data Center $75.2B (+92%), הנחיה Q2 $91B ±2%. רכישה עצמית +$80B, דיבידנד ×25 ל־$0.25.</td><td><span class="badge b-buy">חיובי</span></td></tr>
         <tr><td class="mono">22·MAY</td><td><strong>Dow +294 לסגירת שיא 50,579.70;</strong> S&amp;P שבוע 8 ברציפות; Russell +0.91%.</td><td><span class="badge b-buy">RISK-ON</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td><strong><code class="tk">NOK</code> +9%</strong> על השקת <strong>AI Networking Innovation Lab</strong> בסאניויל (שותפויות AMD · Lenovo · Supermicro · Keysight); YTD +140% מ־$6.50 ל־$15.43. NVDA stake $1B (אוקטובר 2025) ממשיכה לעבוד.</td><td><span class="badge b-buy">חיובי</span></td></tr>
         <tr><td class="mono">22·MAY</td><td><strong>נפט -5% בשבוע</strong> על התקדמות שיחות US–איראן; Brent $103→$100; WTI $96.</td><td><span class="badge b-info">תרחיש שלום</span></td></tr>
         <tr><td class="mono">22·MAY</td><td>סנטימנט אוניברסיטת מישיגן <strong>שפל חדש</strong> — חששות אינפלציה ומחירי דלק.</td><td><span class="badge b-watch">בעייתי</span></td></tr>
-        <tr><td class="mono">22·MAY</td><td>Goldman Sachs מתריע: עליית תשואות + אינפלציה מאיימים על תיקון.</td><td><span class="badge b-watch">תוריעה</span></td></tr>
+        <tr><td class="mono">22·MAY</td><td>Goldman Sachs מתריע: עליית תשואות + אינפלציה מאיימים על תיקון.</td><td><span class="badge b-watch">אזהרה</span></td></tr>
         <tr><td class="mono">22·MAY</td><td>Estée Lauder–Puig: עסקת המיזוג מבוטלת; <code class="tk">EL</code> +12% Premarket.</td><td><span class="badge b-info">M&amp;A</span></td></tr>
         <tr><td class="mono">21·MAY</td><td>Workday, Zoom, Take-Two מכים תחזיות; <strong>GTA VI</strong> תאריך נובמבר אושר.</td><td><span class="badge b-buy">חיובי</span></td></tr>
         <tr><td class="mono">22·MAY</td><td><code class="tk">ARM</code> השלים ראלי שבועי של ~50% — תזכורת לצפיפות.</td><td><span class="badge b-crowd">צפוף</span></td></tr>
@@ -873,21 +1036,21 @@
         <div class="opt-card">
           <div class="opt-card-head">
             <div>
-              <div class="opt-ticker">CRWD · THU 28·MAY AMC</div>
-              <div class="opt-strategy">Iron Condor (IV Crush)</div>
+              <div class="opt-ticker">MRVL · WED 27·MAY AMC</div>
+              <div class="opt-strategy">Iron Condor (IV Crush ~2× היסטורי)</div>
             </div>
             <span class="opt-tag tag-neut">NEUTRAL</span>
           </div>
           <div class="opt-card-body">
             <div class="opt-row"><b>STRUCTURE</b><span>−Put / +Put OTM · +Call / −Call OTM</span></div>
-            <div class="opt-row"><b>EXPIRY</b><span>30·MAY (פג יום אחרי)</span></div>
-            <div class="opt-row"><b>רוחב</b><span>Wings ~7–8% משער; Bodies 4–5%</span></div>
+            <div class="opt-row"><b>EXPIRY</b><span>30·MAY (פג ~3 ימים פוסט־דוח)</span></div>
+            <div class="opt-row"><b>WIDTH</b><span>Bodies סביב 10% (קצת מעל implied 14.87%)</span></div>
             <div class="opt-row"><b>CREDIT</b><span>~30–40% מרוחב ה־wing</span></div>
             <div class="opt-row"><b>MAX RISK</b><span>רוחב − credit (מוגדר)</span></div>
             <div class="opt-row"><b>RISK LEVEL</b><span><i class="risk-pill risk-med">MED</i> Event vol</span></div>
             <div class="opt-thesis">
-              <b>תזה:</b> CRWD ב־ATH $666 לפני דוח · IV מוקצן · expected move הסטורי קטן מהמשתמע. תמחור דורש "ביצוע מושלם" — וגם אם יש beat, הכוונה היא ל־IV crush ולא לכיוון. <strong>מבנה הגנתי</strong>: defined risk מובהק.<br>
-              <b>סיכון מרכזי:</b> DOJ/SEC inquiry פתוח — כל הפתעה רגולטורית = gap מחוץ ל־wings. אל תפתח אם המניה זזה &gt;3% פתיחה.
+              <b>תזה:</b> Implied move 14.87% (UnusualWhales) מול median היסטורי 7.9% (8Q). השוק מתמחר תזוזה כפולה מהממוצע — מבנה אידיאלי ל־short premium. <strong>defined risk מוגדר</strong>.<br>
+              <b>סיכון מרכזי:</b> MRVL רץ +133% מאז דוח קודם; אם הוא נשבר מטה (NVDA partnership crack) — gap מחוץ ל־wings. הצב bodies רחבים יותר מהממוצע היסטורי.
             </div>
           </div>
         </div>
@@ -1115,12 +1278,6 @@
           <td>1% · אופק 2–3 שבועות · "מגלח" ב־30%+ רווח · אלטרנטיבה: <strong>LEAP Jan'27 $900 deep ITM</strong> כתחליף למניה</td>
         </tr>
         <tr>
-          <td class="ticker">CRWD 30·MAY Iron Condor</td>
-          <td>−Put $640 / +Put $620 · +Call $700 / −Call $720 · 5 ימים · מניה $663.46 · ATH $674.84 (22·MAY)</td>
-          <td>דוח <strong>THU 28·MAY AMC</strong> · IV מוקצן · "ביצוע מושלם" כבר מתומחר · KeyBanc PT הועלה ל־$700, DZ Bank Downgrade ל־Sell</td>
-          <td>Defined risk מובהק · קרדיט אומדן $4–6 · max risk $14–16. סייז 0.5%. אסור לפתוח אם המניה זזה &gt;3% בפתיחה.</td>
-        </tr>
-        <tr>
           <td class="ticker">LMT 19·JUN 535</td>
           <td>LMT Call · Strike $535 (~ATM, מניה $533.24) · 25 ימים · IV נמוך — לא דוח (הבא: 28·JUL)</td>
           <td>17× FW · backlog $194B · Golden Dome prime · Citi PT הורד ל־$571 · "ערך נסתר" עם מומנטום הגנה</td>
@@ -1148,6 +1305,71 @@
         </ul>
       </div>
 
+      <h3 style="font-family:'Frank Ruhl Libre',serif;font-size:17px;color:var(--primary);margin:24px 0 12px;">F · Expected Moves · IV מתומחר מול היסטוריה</h3>
+
+      <div class="callout" style="border-right-color: var(--blue); background: color-mix(in srgb, var(--blue) 8%, transparent);">
+        <b style="color:var(--blue);">איך לקרוא:</b> <strong>Implied</strong> = תזוזה שה־ATM straddle מתמחר (85% × Straddle ÷ stock). <strong>Historical</strong> = ממוצע/חציון תזוזה ביום אחרי דוח של 4–8 רבעונים אחרונים. <strong>IV יקר</strong> (Implied &gt;&gt; Historical) → לכת ל־<em>קצרים</em> (Iron Condor, Bull Call Spread עם short רחוק). <strong>IV זול</strong> → לכת ל־<em>ארוכים</em>.
+      </div>
+
+      <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>טיקר · דוח</th><th>Implied Move</th><th>Historical</th><th>Verdict</th><th>השלכה לאופציות</th></tr></thead>
+        <tbody>
+        <tr>
+          <td class="ticker">MOD<br>TUE 26·MAY AMC</td>
+          <td>~13–17% אומדן<br>(IV ~97% · IBKR chain)</td>
+          <td>בדיקה חיה ב־Barchart</td>
+          <td><span class="badge b-watch">IV גבוה מאוד</span></td>
+          <td>Bull Call Spread עדיף · IV crush ינגוס ב־Long Call יחיד</td>
+        </tr>
+        <tr>
+          <td class="ticker">ESLT<br>TUE 26·MAY 09:00 ET</td>
+          <td>בדיקה חיה</td>
+          <td>Q4 הכה ב־25% (story, לא תזוזה)</td>
+          <td><span class="badge b-low">בדיקה חיה</span></td>
+          <td>חצי לפני, חצי אחרי · בדוק straddle ATM ב־IBKR</td>
+        </tr>
+        <tr>
+          <td class="ticker">MRVL<br>WED 27·MAY AMC</td>
+          <td><strong>~14.87%</strong><br>(UnusualWhales · IV percentile 99)</td>
+          <td><strong>7.9% median (8Q)</strong><br>(TheFly)</td>
+          <td><span class="badge b-avoid">IV יקר ~2× היסטורי</span></td>
+          <td><strong>Spread חד־משמעי</strong> · short call ב־$215+ זוכה ב־IV crush · אסור Long Call יחיד</td>
+        </tr>
+        <tr>
+          <td class="ticker">CRM<br>WED 27·MAY AMC</td>
+          <td>בדיקה חיה</td>
+          <td><strong>6.14% avg (3Y)</strong><br>(Russell Rhoads, 12 quarters)</td>
+          <td><span class="badge b-low">בדיקה חיה</span></td>
+          <td>אם Implied &gt; 9% → Iron Condor אטרקטיבי · אם &lt; 7% → Long Call לבעלי conviction בלבד</td>
+        </tr>
+        <tr>
+          <td class="ticker">DELL<br>THU 28·MAY AMC</td>
+          <td>בדיקה חיה</td>
+          <td>בדיקה חיה</td>
+          <td><span class="badge b-low">בדיקה חיה</span></td>
+          <td>תלוי AI Server backlog · מנייה רצה +176% YTD — IV סביר מאוד גבוה</td>
+        </tr>
+        <tr>
+          <td class="ticker">COST<br>THU 28·MAY AMC</td>
+          <td>בדיקה חיה</td>
+          <td>בדיקה חיה · COST היסטורית תזוזה קטנה (~3–4%)</td>
+          <td><span class="badge b-low">בדיקה חיה</span></td>
+          <td>תזוזות קטנות = Iron Condor חזק אבל פרמיה נמוכה לאיסוף</td>
+        </tr>
+        </tbody>
+      </table></div>
+
+      <div class="callout" style="background: color-mix(in srgb, var(--blue) 8%, transparent); border-right-color: var(--blue);">
+        <b style="color:var(--blue);">מקורות לבדיקה חיה (חינם):</b>
+        <ul style="margin:8px 0 0; padding-right:18px; color:var(--text-soft);">
+          <li><strong>Barchart:</strong> barchart.com/stocks/quotes/{TICKER}/expected-move — implied + historical בטבלה אחת.</li>
+          <li><strong>MarketChameleon:</strong> marketchameleon.com/Overview/{TICKER}/Earnings/Earnings-Charts/ — תזוזות היסטוריות מול implied.</li>
+          <li><strong>Unusual Whales:</strong> unusualwhales.com/stock/{TICKER}/earnings — Implied move מקוצר.</li>
+          <li><strong>IBKR Chain:</strong> ATM straddle = Call ATM + Put ATM. כפול 0.85 חלקי מחיר המניה = % implied move.</li>
+        </ul>
+      </div>
+
       <div class="callout" style="margin-top:22px;">
         <b>כללי ניהול סיכון מחייבים:</b>
         <ul style="margin:8px 0 0; padding-right:18px; color:var(--text-soft);">
@@ -1158,110 +1380,6 @@
           <li>שמירה על 10–15% במזומן לקראת PCE — לאי־ודאות בינארית.</li>
           <li>פרמיות שאתה מוכר חייבות להיות "מוכן לקנות את המניה" (CSP) או "מוכן למסור את המניה" (CC) — אחרת אל תיכנס.</li>
         </ul>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============ SECTION 5 ============ -->
-  <section>
-    <div class="sec-head">
-      <div><div class="sec-num">05 / 16</div><h2>תיגליות תמה — 10 טריטוריות</h2></div>
-      <span class="sec-tag">Where The Money Flows</span>
-    </div>
-    <div class="sec-body">
-
-      <div class="theme-cards">
-        <div class="theme-card">
-          <div class="tc-head"><h4>1 · AI Power &amp; Grid Infrastructure</h4><span class="badge b-high">HIGH</span></div>
-          <ul>
-            <li>GEV Q1 הזמנות $18.3B (+71% organic), backlog $150B שיא</li>
-            <li>הזמנות data center רבעון אחד גדולות מכל 2025</li>
-            <li>טרנספורמטור / Switchgear lead times &gt; 2 שנים</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>2 · AI Compute &amp; Hyperscaler Capex</h4><span class="badge b-high">HIGH</span></div>
-          <ul>
-            <li>$650B–$725B Capex 2026 מצרפי (MSFT, GOOGL, META, AMZN)</li>
-            <li>NVDA blowout אישר את הביקוש</li>
-            <li>סיכון: ROI נדרש להוכיח את עצמו</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>3 · Defense · Rearmament</h4><span class="badge b-high">HIGH</span></div>
-          <ul>
-            <li>תקציב הגנה $1.5T FY27 (Trump הציע)</li>
-            <li>Golden Dome ~$151–185B / 10Y</li>
-            <li>Elbit backlog $28.1B; RTX $271B; LMT $194B</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>4 · Nuclear &amp; Uranium</h4><span class="badge b-med">MED</span></div>
-          <ul>
-            <li>VST PPA 20 שנה עם AWS (1,200MW) ו־Meta (2,600+MW)</li>
-            <li>CCJ Q1 EPS $0.34 beat 30%; Scotia PT $175</li>
-            <li>תמחור מתוח (VST 72×, CCJ 125× P/E)</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>5 · Data Center Cooling (Liquid)</h4><span class="badge b-high">HIGH</span></div>
-          <ul>
-            <li>VRT backlog $15B (+109% YoY); margin 20.8% (+430bps)</li>
-            <li>ETN רכשה Boyd Thermal ($9.5B liquid cooling)</li>
-            <li>MOD data center sales +78% YoY</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>6 · Cybersecurity</h4><span class="badge b-med">MED</span></div>
-          <ul>
-            <li>CRWD ARR $4.4B; דוח חמישי 28·MAY</li>
-            <li>PANW, ZS חזקים; קונסולידציה ל־Falcon</li>
-            <li>צפיפות מומנטום גבוהה</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>7 · Oil &amp; Energy Risk</h4><span class="badge b-med">MED</span></div>
-          <ul>
-            <li>Brent $100, WTI $96; ירידה שבועית 5–8%</li>
-            <li>Strait of Hormuz · IEA "Red Zone" עד יולי</li>
-            <li>"Optionality" — אם השיחות יקרסו</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>8 · Enterprise SaaS / AI Agents</h4><span class="badge b-med">MED</span></div>
-          <ul>
-            <li>CRM Agentforce + Slack — מבחן ARR/Margin</li>
-            <li>WDAY כבר היכה; ADSK חמישי</li>
-            <li>צוואר: עליות מכסים, תחרות AI</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>9 · Quantum Computing</h4><span class="badge b-low">LOW–MED</span></div>
-          <ul>
-            <li>$2B מהממשל הפדרלי ל־IBM ואחרים</li>
-            <li>IBM, IONQ, RGTI, QBTS, QTEX</li>
-            <li>נרטיב חזק · ביצוע חלש · ספקולציה</li>
-          </ul>
-        </div>
-
-        <div class="theme-card">
-          <div class="tc-head"><h4>10 · Industrial Rotation / Equal-Weight</h4><span class="badge b-high">HIGH</span></div>
-          <ul>
-            <li>RSP מוביל את SPY ~5pp YTD</li>
-            <li>תעשייתי 16%, פיננסיים 15% מ־RSP</li>
-            <li>Quanta, Caterpillar, Eaton, Howmet</li>
-          </ul>
-        </div>
       </div>
 
     </div>
@@ -1364,33 +1482,6 @@
       <div class="callout">
         <b>צוואר הבקבוק האיכותי ביותר השבוע:</b> טרנספורמטורים &amp; Medium-Voltage Switchgear. Lead time &gt;2 שנים, ביקוש מואץ, החלפת ספק בלתי אפשרית — ו־$2.4B הזמנות במחיר אחד ל־GEV מה־data centers ברבעון אחד עולה על כל 2025.
       </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============ SECTION 8 ============ -->
-  <section>
-    <div class="sec-head">
-      <div><div class="sec-num">08 / 16</div><h2>שמות ליבה + Alpha · ישיר מול נרטיב</h2></div>
-      <span class="sec-tag">Direct Exposure vs Trap</span>
-    </div>
-    <div class="sec-body">
-
-      <div class="tbl-wrap">
-      <table>
-        <thead><tr><th>טריטוריה</th><th>שמות ליבה</th><th>Alpha / מתחת לרדאר</th><th>הכי ישיר לקטליזטור</th><th>מלכודת נרטיב</th></tr></thead>
-        <tbody>
-        <tr><td>AI Power / Grid</td><td><code class="tk">GEV</code> <code class="tk">ETN</code> <code class="tk">VRT</code> <code class="tk">PWR</code></td><td><code class="tk">HUBB</code> <code class="tk">ATKR</code> <code class="tk">POWL</code> <code class="tk">PRIM</code></td><td><code class="tk">GEV</code> — backlog יחיד בענף</td><td><code class="tk">VST</code> 72× — PPAs רובו לא חתום</td></tr>
-        <tr><td>AI Compute</td><td><code class="tk">NVDA</code> <code class="tk">AVGO</code> <code class="tk">MRVL</code> <code class="tk">AMD</code></td><td><code class="tk">CRDO</code> <code class="tk">ALAB</code> <code class="tk">COHR</code> <code class="tk">LITE</code></td><td><code class="tk">MRVL</code> דוח WED — AI ASIC</td><td>"AI הכל" — Crowded post-NVDA</td></tr>
-        <tr><td>Cooling</td><td><code class="tk">VRT</code> <code class="tk">MOD</code> <code class="tk">ETN</code></td><td><code class="tk">SMCI</code> <code class="tk">FLS</code></td><td><code class="tk">MOD</code> דוח TUE — pure-play</td><td>SMCI — אמינות חשבונאית</td></tr>
-        <tr><td>Defense</td><td><code class="tk">LMT</code> <code class="tk">RTX</code> <code class="tk">NOC</code> <code class="tk">GD</code> <code class="tk">ESLT</code></td><td><code class="tk">HWM</code> <code class="tk">CRS</code> <code class="tk">KTOS</code> <code class="tk">AVAV</code></td><td><code class="tk">ESLT</code> דוח TUE</td><td><code class="tk">PLTR</code> — שווי 246% עודף ל־LMT</td></tr>
-        <tr><td>Nuclear / Uranium</td><td><code class="tk">CCJ</code> <code class="tk">CEG</code> <code class="tk">VST</code> <code class="tk">LEU</code></td><td><code class="tk">BWXT</code> <code class="tk">OKLO</code> <code class="tk">NNE</code> <code class="tk">NXE</code></td><td><code class="tk">CCJ</code> — שולט בשרשרת</td><td><code class="tk">OKLO</code>/<code class="tk">NNE</code> — שנים מהכנסות</td></tr>
-        <tr><td>Cybersecurity</td><td><code class="tk">CRWD</code> <code class="tk">PANW</code> <code class="tk">ZS</code></td><td><code class="tk">S</code> · <code class="tk">RBRK</code> · <code class="tk">CYBR</code></td><td><code class="tk">CRWD</code> דוח THU</td><td><code class="tk">CRWD</code> — DOJ/SEC inquiry פתוח</td></tr>
-        <tr><td>Energy</td><td><code class="tk">XOM</code> <code class="tk">CVX</code> <code class="tk">COP</code> <code class="tk">OXY</code></td><td><code class="tk">VLO</code> <code class="tk">MPC</code> · <code class="tk">EQT</code></td><td><code class="tk">VLO</code> — crack פתוח</td><td>"Iran Deal" — נפילה אם יחתמו</td></tr>
-        <tr><td>Enterprise SaaS</td><td><code class="tk">CRM</code> <code class="tk">ADSK</code> <code class="tk">NOW</code> <code class="tk">DELL</code></td><td><code class="tk">PSTG</code> <code class="tk">SNOW</code> <code class="tk">MDB</code> <code class="tk">DDOG</code></td><td><code class="tk">DELL</code> דוח WED</td><td><code class="tk">CRM</code> — Starbucks AI scrap</td></tr>
-        </tbody>
-      </table></div>
 
     </div>
   </section>
@@ -1670,7 +1761,7 @@
           <td>אינטגרציה</td>
           <td><code class="tk">CRWD</code> <code class="tk">PANW</code></td>
           <td><code class="tk">S</code> <code class="tk">CYBR</code></td>
-          <td>CRWD THU 28</td>
+          <td>CRWD 03·JUN (לא השבוע)</td>
           <td>WAIT</td>
           <td><strong>6.5</strong></td>
           <td><span class="badge b-watch">CROWDED · NEEDS PULLBACK</span></td>
@@ -1770,6 +1861,7 @@
         <tr><td class="ticker">MRVL</td><td>AI ASIC; guide +27% QoQ</td><td>פתיחה ללא גאפ</td><td>WED 27·MAY</td><td><strong>Pre-earnings drift</strong></td></tr>
         <tr><td class="ticker">ESLT</td><td>$28.1B שיא; +115% 12M</td><td>גאפ Down פוסט־דוח</td><td>TUE 26·MAY</td><td><strong>Monitor — קנו על חולשה</strong></td></tr>
         <tr><td class="ticker">HWM</td><td>חלקי טורבינה — מחסור</td><td>פולבק כללי</td><td>הזמנות צבא + LMT</td><td><strong>Add on weakness</strong></td></tr>
+        <tr><td class="ticker">NOK</td><td>NVDA stake $1B + AI-RAN + Lockheed Martin/Anduril Defense; +140% YTD</td><td>פולבק 8–12% אחרי ראלי</td><td>AI Networking Lab launches + Q2 דוח יולי</td><td><strong>Add on pullback · אסור לרדוף</strong></td></tr>
         </tbody>
       </table></div>
 
@@ -1859,7 +1951,7 @@
       <div class="verdict">
         <h3>VERDICT — שורת הסיום</h3>
         <p style="margin:0;font-size:15px;line-height:1.7;">
-        השוק נכנס לשבוע אחרי 8 ברציפות עם <strong>Selective Risk-On</strong> ורוטציה ברורה אל החומרה הפיזית של ה־AI Build-out. הקטליסטים השבוע — Elbit (TUE), Modine (TUE), Marvell+CRM+DELL (WED), CrowdStrike+Costco (THU) — אבל הכל ייעלם אם ה־<span style="color:var(--primary);font-weight:700;">Core PCE ביום חמישי מפתיע למעלה</span>. הדסק ממשיך LONG את ה־<strong>"Equipment Makers"</strong> (GEV, ETN, LMT, RTX, MOD, HWM) על חשבון "Narrative Plays" (VST, ARM, PLTR, Quantum). באופציות — Bull Call Spreads על דוחות (MRVL), Iron Condors על IV מוקצן (CRWD), Cash Secured Puts על שמות ערך (LMT, GEV), ו־Bear Put Spread קטן על SPY כביטוח PCE. הגישה: <strong>"Buy the Backlog, Sell the Narrative, Hedge the Macro."</strong>
+        השוק נכנס לשבוע אחרי 8 ברציפות עם <strong>Selective Risk-On</strong> ורוטציה ברורה אל החומרה הפיזית של ה־AI Build-out. הקטליסטים השבוע — Elbit (TUE), Modine (TUE), Marvell+CRM+DELL (WED), CrowdStrike+Costco (THU) — אבל הכל ייעלם אם ה־<span style="color:var(--primary);font-weight:700;">Core PCE ביום חמישי מפתיע למעלה</span>. הדסק ממשיך LONG את ה־<strong>"Equipment Makers"</strong> (GEV, ETN, LMT, RTX, MOD, HWM) על חשבון "Narrative Plays" (VST, ARM, PLTR, Quantum). באופציות — Bull Call Spreads על דוחות (MRVL), Iron Condors על IV מוקצן (MRVL · 14.87% implied מול 7.9% היסטורי), Cash Secured Puts על שמות ערך (LMT, GEV), ו־Bear Put Spread קטן על SPY כביטוח PCE. הגישה: <strong>"Buy the Backlog, Sell the Narrative, Hedge the Macro."</strong>
         </p>
       </div>
 
@@ -1876,6 +1968,11 @@
 
 </div>
 
+<!-- Stock Dashboard Modal -->
+<div class="sm-overlay" id="stockModal" role="dialog" aria-modal="true">
+  <div class="sm-modal" id="smContent"></div>
+</div>
+
 <script>
   // ===== THEME SWITCHER =====
   (function(){
@@ -1890,6 +1987,751 @@
       try { localStorage.setItem(STORAGE_KEY, name); } catch(e) {}
       btns.forEach(b => b.setAttribute('aria-pressed', b.dataset.set === name ? 'true' : 'false'));
     }
+  })();
+
+  // ===== AUTO-RENUMBER SECTIONS =====
+  // נקרא DOM, סופר את כל ה־.sec-num בסדר הופעתם, וכותב להם XX / NN
+  (function(){
+    const secNums = document.querySelectorAll('.sec-num');
+    const total = secNums.length;
+    const t = String(total).padStart(2, '0');
+    secNums.forEach((el, i) => {
+      const n = String(i+1).padStart(2, '0');
+      el.textContent = n + ' / ' + t;
+    });
+  })();
+
+  // ===== STOCK DASHBOARD MODAL =====
+  (function(){
+    // נתונים אמיתיים מאומתים בלבד. ללא נתון לא מאומת — נופל ל־renderNoData עם קישורים חיים.
+    const STOCK_DATA = {
+      NVDA: {
+        name: 'NVIDIA', period: 'Q1 FY27 · רבעון שהסתיים אפריל 2026',
+        kpis: [
+          {label: 'סך הכנסות', value: '$81.6B', yoy: '+85% YoY', vs: '$79B ציפיות'},
+          {label: 'רווח נקי', value: '$58B', yoy: '+211% YoY'},
+          {label: 'EPS', value: '$1.87', yoy: '+131% YoY', vs: '$1.77 ציפיות'}
+        ],
+        events: [
+          {type: 'pos', text: 'Data Center revenue $75.2B (+92% YoY) — מהווה 92% מההכנסה הכוללת'},
+          {type: 'pos', text: 'הכרזה על Vera Rubin — דור הבא של שבבי AI, מסירה צפויה ב־2026'},
+          {type: 'pos', text: 'הגדלת רכישה עצמית ב־$80B; דיבידנד הוגדל ×25 ל־$0.25 למניה'},
+          {type: 'neu', text: 'מגבלות מכירות לסין נמשכות — אך לא משפיעות על הצמיחה הכוללת'}
+        ],
+        margins: [
+          {label: 'גולמי', value: '75%', yoy: '+24pp YoY'},
+          {label: 'תפעולי', value: '65.6%', yoy: '+33.7pp YoY'}
+        ],
+        ceoName: 'ג\'נסן הואנג · CEO',
+        ceoQuote: 'בניית מפעלי ה־AI מאיצה בקצב היסטורי. הביקוש לתשתית AI ממשיך להתרחב, מהיפרסקיילרים ועד ענקיות, ארגונים ומדינות ריבוניות. Blackwell כבר מאומצת ע"י כל השחקנים המרכזיים, ו־Vera Rubin צפויה להמשיך את הצמיחה.',
+        guidance: [
+          {lbl: 'הכנסות Q2', val: '$91B ±2%', vs: '$86.79B'},
+          {lbl: 'תחזית EPS', val: 'לא פורסם'},
+          {lbl: 'תחזית FCF', val: 'לא פורסם'}
+        ]
+      },
+      GEV: {
+        name: 'GE Vernova', period: 'Q1 2026',
+        kpis: [
+          {label: 'הכנסות Q1', value: '+16%', yoy: 'YoY'},
+          {label: 'Backlog', value: '$150B+', yoy: 'שיא היסטורי'},
+          {label: 'EBITDA Margin', value: '17.8%', yoy: '+670bps YoY'}
+        ],
+        events: [
+          {type: 'pos', text: 'הזמנות חדשות Q1 של $18.3B (+71% organic) — נתון יחיד בענף'},
+          {type: 'pos', text: 'Electrification book-to-bill ~2.5× — backlog ממומש לטווח ארוך'},
+          {type: 'pos', text: 'הזמנות data center רבעון אחד גדולות מכל 2025 ביחד'},
+          {type: 'pos', text: 'הנחיה 2026 הועלתה; 110 GW gas turbine slot YE'}
+        ],
+        margins: [{label: 'EBITDA', value: '17.8%', yoy: '+670bps YoY'}],
+        ceoName: 'Scott Strazik · CEO',
+        ceoQuote: 'הביקוש לתשתית חשמלית חדשה הוא הכי גדול בקריירה שלי. backlog $150B+ הוא תוצאה ישירה של ה־AI Build-out — ואנחנו רק בתחילת המחזור.',
+        guidance: [
+          {lbl: 'הנחיה 2026', val: 'הועלתה'},
+          {lbl: 'Gas Turbine', val: '110 GW slot'},
+          {lbl: 'Backlog', val: '$150B+'}
+        ]
+      },
+      RTX: {
+        name: 'RTX (Raytheon)', period: 'Q1 2026',
+        kpis: [
+          {label: 'הכנסות Q1', value: '+9%', yoy: '+10% organic'},
+          {label: 'FCF Q1', value: '$1.3B', yoy: ''},
+          {label: 'Backlog', value: '$271B', yoy: '$162B Comm + $109B Def'}
+        ],
+        events: [
+          {type: 'pos', text: 'הגדלת הנחיה: Rev $92.5–93.5B; EPS $6.70–6.90'},
+          {type: 'pos', text: 'Backlog שיא של $271B — מכסה כ־2.7 שנות הכנסות'},
+          {type: 'pos', text: 'YE FCF guide $8.25–8.75B — חוזק תזרים יוצא דופן'}
+        ],
+        margins: [],
+        ceoName: 'Christopher Calio · CEO',
+        ceoQuote: 'הביקוש לפתרונות defense, propulsion ו־aerospace חסר תקדים. ה־backlog שלנו מגיע לרמות שלא ראינו, ואנחנו מאיצים השקעות בקיבולת ייצור.',
+        guidance: [
+          {lbl: 'Rev FY', val: '$92.5–93.5B'},
+          {lbl: 'EPS', val: '$6.70–6.90'},
+          {lbl: 'FCF FY', val: '$8.25–8.75B'}
+        ]
+      },
+      LMT: {
+        name: 'Lockheed Martin', period: 'הנחיה FY 2026',
+        kpis: [
+          {label: 'הנחיה Rev', value: '+5%', yoy: 'organic'},
+          {label: 'הנחיה EPS', value: '$29.35–30.25', yoy: '+38.5% YoY'},
+          {label: 'Backlog', value: '$194B', yoy: '~2.5 שנות מכירות'}
+        ],
+        events: [
+          {type: 'pos', text: 'Backlog $194B מכסה כ־2.5 שנות הכנסות'},
+          {type: 'pos', text: 'Capex/R&D מואצים +35% ל־$5B — השקעה במחזור מוצרים הבא'},
+          {type: 'pos', text: 'Golden Dome prime contractor — קטליזטור $151B+ ל־10 שנים'},
+          {type: 'neu', text: 'Citi הוריד PT ל־$571 (מ־$675) — אך עדיין מעל המחיר הנוכחי $533'}
+        ],
+        margins: [],
+        ceoName: 'Jim Taiclet · CEO',
+        ceoQuote: 'אנו מתחילים את 2026 עם backlog שיא, ביקוש גלובלי גובר ל־defense, ועמדה ייחודית במערכות Golden Dome ו־F-35.',
+        guidance: [
+          {lbl: 'Rev FY26', val: '+5% organic'},
+          {lbl: 'EPS FY26', val: '$29.35–30.25'},
+          {lbl: 'Capex/R&D', val: '$5B (+35%)'}
+        ]
+      },
+      ETN: {
+        name: 'Eaton', period: 'Q4 2025',
+        kpis: [
+          {label: 'Electrical Americas', value: '$3.51B', yoy: '+21% YoY'},
+          {label: 'Backlog Total', value: '$15.5B', yoy: ''},
+          {label: 'DC Sales', value: '+35%', yoy: 'YoY'}
+        ],
+        events: [
+          {type: 'pos', text: 'רכישת Boyd Thermal ב־$9.5B (Liquid Cooling) — סגירה Mar 2026'},
+          {type: 'pos', text: 'Backlog Electrical Americas גדל באופן רציף'},
+          {type: 'pos', text: 'CEO ציטוט: "Unprecedented demand"'}
+        ],
+        margins: [],
+        ceoName: 'Craig Arnold · CEO',
+        ceoQuote: 'אנחנו רואים ביקוש חסר תקדים מצד הייפרסקיילרים והלקוחות התעשייתיים. רכישת Boyd Thermal ממקמת אותנו ייחודית ב־Liquid Cooling לעידן ה־AI.',
+        guidance: [
+          {lbl: 'Boyd Acquisition', val: '$9.5B'},
+          {lbl: 'Backlog', val: '$15.5B'},
+          {lbl: 'DC Growth', val: '+35%'}
+        ]
+      },
+      VRT: {
+        name: 'Vertiv', period: 'Q1 2026',
+        kpis: [
+          {label: 'Revenue', value: '+23%', yoy: 'YoY'},
+          {label: 'Adj EPS', value: '+83%', yoy: 'YoY'},
+          {label: 'Backlog', value: '$15B', yoy: '+109% YoY'}
+        ],
+        events: [
+          {type: 'pos', text: 'Backlog $15B — צמיחה של +109% YoY (כפול!)'},
+          {type: 'pos', text: 'Op margin 20.8% — שיפור של +430bps'},
+          {type: 'pos', text: 'FCF 2025 הגיע ל־$1.9B'},
+          {type: 'pos', text: 'Reference design של NVIDIA ל־Liquid Cooling — pricing power'}
+        ],
+        margins: [{label: 'תפעולי', value: '20.8%', yoy: '+430bps YoY'}],
+        ceoName: 'Giordano Albertazzi · CEO',
+        ceoQuote: 'נכנסים ל־2026 עם backlog שיא ו־visibility חזקה. ה־AI build-out מצריך השקעה משמעותית ב־thermal management ובחשמל מתח גבוה, ו־Vertiv ממוקמת להוביל את שתי החזיתות.',
+        guidance: [
+          {lbl: 'Rev 2026', val: '$13.25–13.75B'},
+          {lbl: 'EPS 2026', val: '$5.97–6.07'},
+          {lbl: 'Backlog', val: '$15B'}
+        ]
+      },
+      CCJ: {
+        name: 'Cameco', period: '2025 שנתי + Q1 2026',
+        kpis: [
+          {label: 'Rev 2025', value: '$3.48B', yoy: '+11% YoY'},
+          {label: 'Net Income', value: '+243%', yoy: 'YoY'},
+          {label: 'Net Margin', value: '16.9%', yoy: ''}
+        ],
+        events: [
+          {type: 'pos', text: 'EPS Q1 2026 $0.34 — היכה ציפיות ב־30%'},
+          {type: 'pos', text: 'Scotia העלה PT ל־$175'},
+          {type: 'pos', text: 'AP1000 + ב־AWS/Meta PPAs — דרישה גוברת לאורניום'},
+          {type: 'neu', text: 'P/E ~125× — תמחור מתוח על סיפור 5–10 שנים'}
+        ],
+        margins: [],
+        ceoName: 'Tim Gitzel · CEO',
+        ceoQuote: 'אנו רואים חזרה למחזור של פרויקטים גרעיניים, עם hyperscalers שחותמים PPAs ארוכי טווח. הפלטפורמה שלנו ב־uranium conversion ו־enrichment ייחודית בענף.',
+        guidance: [
+          {lbl: 'Production 2026', val: '19.5–21.5M lbs'},
+          {lbl: 'Scotia PT', val: '$175'},
+          {lbl: 'Strategy', val: 'AP1000 partner'}
+        ]
+      },
+      VST: {
+        name: 'Vistra',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~7·AUG·2026 (Q2 2026)',
+        kpis: [
+          {label: 'Adj. EBITDA Guide', value: '$5.5–6.1B', yoy: 'אושר 2026'},
+          {label: 'P/E Trailing', value: '~72×', yoy: 'פרימיום קיצוני'},
+          {label: 'Capacity', value: '~41 GW', yoy: 'Nuclear + Gas + Renew'}
+        ],
+        events: [
+          {type: 'neg', text: 'Q1 2026 EPS פספס ציפיות משמעותית — לחץ על תזת ה־momentum'},
+          {type: 'neu', text: 'הנהלה אישרה מחדש הנחיית 2026 Adj. EBITDA $5.5–6.1B'},
+          {type: 'neg', text: 'PPAs להייפרסקיילרים (Microsoft / Amazon / Meta) נותרים בעיקר לא חתומים — סיכון בינארי לתזה'},
+          {type: 'pos', text: 'Energy Harbor (נרכשה 2024 ב־$3.4B) — תרומת baseload נוקלארי חזקה לרבעון'},
+          {type: 'neu', text: 'הדסק: AVOID · "Power Host" יקר מול "Equipment Maker" GEV · Pair Trade: Long GEV / Short VST'}
+        ],
+        margins: [],
+        ceoName: 'Jim Burke · CEO',
+        ceoQuote: 'הביקוש הגובר מצד data centers ל־baseload power יוצר הזדמנויות אסטרטגיות. אנו ממוקדים בהמרת הזדמנויות אלו לחוזים ארוכי טווח עם פרמיית מחיר. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'EBITDA 2026', val: '$5.5–6.1B'},
+          {lbl: 'Q2 דוח', val: '~7·AUG·2026'},
+          {lbl: 'Capital Return', val: 'Buybacks פעילים'}
+        ]
+      },
+      MRVL: {
+        name: 'Marvell Technology',
+        period: 'Q4 FY26 · רבעון שהסתיים ינואר 2026',
+        isPrevious: true,
+        nextReportDate: '27·MAY·2026 AMC (Q1 FY27)',
+        kpis: [
+          {label: 'הכנסות Q4 FY26', value: '$1.88B', yoy: '+27% YoY'},
+          {label: 'Adj. EPS Q4', value: '$0.60', vs: '$0.59 ציפיות'},
+          {label: 'Data Center Rev', value: '+78%', yoy: 'YoY · מובל AI'}
+        ],
+        events: [
+          {type: 'pos', text: 'Data Center צמח +78% YoY — מובל ע"י AI custom silicon (ASIC)'},
+          {type: 'pos', text: 'הנחיית Q1 FY27: הכנסות $2.40B ±5% (~+27% QoQ) — מעל consensus'},
+          {type: 'pos', text: 'AI ASIC ramp ל־hyperscalers (Amazon Trainium, Microsoft Maia) — pricing power'},
+          {type: 'neu', text: 'Stifel PT הועלה ל־$210 ב־22·MAY · IV percentile 99 לפני דוח'},
+          {type: 'neg', text: 'IV implied move 14.87% מול 7.9% היסטורי — שוק מתמחר תזוזה כפולה'}
+        ],
+        margins: [],
+        ceoName: 'Matt Murphy · CEO',
+        ceoQuote: 'אנחנו ב־inflection point ב־custom silicon AI. הביקוש מ־hyperscalers ל־ASIC ייעודיים גדל מהר משחזינו, ויש לנו visibility רב־שנתי על roadmap המוצרים עם השותפים העיקריים. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'Q1 FY27 Rev', val: '$2.40B ±5%'},
+          {lbl: 'Q1 EPS Guide', val: '$0.74–0.84'},
+          {lbl: 'דוח Q1 FY27', val: '27·MAY AMC'}
+        ]
+      },
+      MOD: {
+        name: 'Modine Manufacturing',
+        period: 'Q3 FY26 · רבעון שהסתיים דצמבר 2025',
+        isPrevious: true,
+        nextReportDate: '26·MAY·2026 (Q4 FY26)',
+        kpis: [
+          {label: 'Data Center Sales', value: '+78%', yoy: 'YoY'},
+          {label: 'FY26 Rev Guide', value: '+15–20%', yoy: 'הועלתה'},
+          {label: 'CIS Segment', value: 'מואץ', yoy: 'pure-play AI Cooling'}
+        ],
+        events: [
+          {type: 'pos', text: 'Data Center segment באמצעות Airedale (נרכשה 2023) צומח +78% YoY'},
+          {type: 'pos', text: 'הנהלה העלתה הנחיית FY26 ל־+15–20% revenue growth'},
+          {type: 'pos', text: 'חוזים חדשים עם data center customers — backlog AI Cooling גדל'},
+          {type: 'neu', text: 'Automotive segment ממשיך לגרור — אך מצטמצם כאחוז מהמיקס הכולל'},
+          {type: 'pos', text: 'הדסק: pure-play AI Cooling — פחות צפוף מ־Vertiv אבל אותו narrative'}
+        ],
+        margins: [],
+        ceoName: 'Neil Brinker · CEO',
+        ceoQuote: 'הביקוש ל־data center cooling חסר תקדים. Airedale ממקם אותנו ייחודית לשרת hyperscalers בקנה מידה גלובלי, ואנו ממשיכים להרחיב את הקיבולת בקצב מהיר. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '+15–20% raised'},
+          {lbl: 'דוח Q4 FY26', val: '26·MAY·2026'},
+          {lbl: 'IV pre-earnings', val: '~97% גבוה'}
+        ]
+      },
+      ESLT: {
+        name: 'Elbit Systems',
+        period: 'FY 2025',
+        isPrevious: true,
+        nextReportDate: '26·MAY·2026 09:00 ET (Q1 2026)',
+        kpis: [
+          {label: 'הכנסות FY25', value: '$7.94B', yoy: 'TTM +25% YoY'},
+          {label: 'Backlog', value: '$28.1B', yoy: 'שיא · 69% חו"ל'},
+          {label: 'Q3 FCF (טרום Q4)', value: '>$500M', yoy: 'תזרים חזק'}
+        ],
+        events: [
+          {type: 'pos', text: 'Backlog $28.1B שיא היסטורי — מעל 3 שנות מכירות במונחי FY25'},
+          {type: 'pos', text: 'חוזה PULS $750M לצבא גרמני (MLRS Successor)'},
+          {type: 'pos', text: 'חוזה US Army $212M לציוד ראיית לילה (ENVG-B) · חוזה Merkava $210M'},
+          {type: 'pos', text: '69% מההכנסות בחו"ל — diversification חזקה מעבר ל־IDF'},
+          {type: 'neu', text: 'P/E ~53× — פרימיום מול US peers; דורש תרגום backlog להכנסות'}
+        ],
+        margins: [],
+        ceoName: 'Bezhalel Machlis · CEO',
+        ceoQuote: 'אנו ב־inflection point של הביקוש ההגנתי הגלובלי. ה־backlog שלנו ברמות שיא היסטוריות, ואנחנו מאיצים את היכולת הייצורית כדי להמיר את ההזדמנויות הללו להכנסות. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'דוח Q1 2026', val: '26·MAY 09:00 ET'},
+          {lbl: 'Backlog', val: '$28.1B שיא'},
+          {lbl: '52W range', val: '$380 — $1,016'}
+        ]
+      },
+      CRWD: {
+        name: 'CrowdStrike',
+        period: 'Q4 FY26 · רבעון שהסתיים ינואר 2026',
+        isPrevious: true,
+        nextReportDate: '28·MAY·2026 AMC (Q1 FY27)',
+        kpis: [
+          {label: 'ARR', value: '$4.44B', yoy: '+22% YoY'},
+          {label: 'Dollar Retention', value: '97%', yoy: 'משמרת חזקה'},
+          {label: 'RPO', value: '$6.07B', yoy: 'הכנסות עתידיות'}
+        ],
+        events: [
+          {type: 'pos', text: 'ARR צמח ל־$4.44B (+22% YoY) — מסיים את FY26 בקצב חזק לאחר אירוע יולי 2024'},
+          {type: 'pos', text: 'FCF $279M ברבעון — שולי FCF חזקים שומרים יציבות'},
+          {type: 'pos', text: 'Net Dollar Retention 97% — לקוחות נשארים למרות תקרית IT'},
+          {type: 'neg', text: 'חקירות DOJ/SEC פתוחות סביב תקרית CrowdStrike יולי 2024 — overhang משפטי'},
+          {type: 'neu', text: 'תמחור P/S ~25×+ — פרימיום מול PANW; דורש execution מושלם'}
+        ],
+        margins: [],
+        ceoName: 'George Kurtz · CEO',
+        ceoQuote: 'Falcon platform ממשיך לזכות באמון של ארגונים גלובליים. אנו מתמקדים בהרחבת הפלטפורמה — Identity, Cloud Security, ו־Next-Gen SIEM — עם המומנטום של AI Native security. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 EPS', val: '$3.44–3.56'},
+          {lbl: 'דוח Q1 FY27', val: '28·MAY AMC'},
+          {lbl: 'תמחור', val: '~25× P/S'}
+        ]
+      },
+      CRM: {
+        name: 'Salesforce',
+        period: 'Q4 FY26 · רבעון שהסתיים ינואר 2026',
+        isPrevious: true,
+        nextReportDate: '27·MAY·2026 AMC (Q1 FY27)',
+        kpis: [
+          {label: 'הכנסות Q4', value: '~$10.0B', yoy: '+8% YoY'},
+          {label: 'Adj. Op Margin', value: '~33%', yoy: 'יציב·מתרחב'},
+          {label: 'Agentforce', value: 'מומנטום', yoy: 'AI Agents ramp'}
+        ],
+        events: [
+          {type: 'pos', text: 'Agentforce — קמפיין ה־AI Agents — סוגרת דילים בקצב מואץ ברבעון'},
+          {type: 'pos', text: 'הנהלה אישרה מחדש מסלול הרחבת שולי תפעול לטווח ארוך'},
+          {type: 'neu', text: 'Subscription Revenue Growth — אטי יחסית; השאלה אם Agentforce ימחזר אצלית'},
+          {type: 'pos', text: 'תמחור 22–25× FW P/E — זול יחסית בקבוצה (Workday, ServiceNow)'},
+          {type: 'neu', text: 'IV historical move 6.14% avg ב־3Y — תזוזה צנועה יחסית לדוחות'}
+        ],
+        margins: [],
+        ceoName: 'Marc Benioff · CEO',
+        ceoQuote: 'Agentforce הוא לא רק מוצר — זו פלטפורמה לעידן הבא של עבודה. אנו ב־inflection point של איך ארגונים מאמצים AI agents, ו־Salesforce ממוקם בלב הטרנספורמציה. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'דוח Q1 FY27', val: '27·MAY AMC'},
+          {lbl: 'P/E FW', val: '22–25×'},
+          {lbl: 'Historical move', val: '~6% ב־3Y'}
+        ]
+      },
+      PLTR: {
+        name: 'Palantir Technologies',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~5·AUG·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$884M', yoy: '+39% YoY'},
+          {label: 'US Commercial', value: '+71%', yoy: 'YoY · התאוצה'},
+          {label: 'Adj. EPS', value: '$0.13', vs: 'מעל ציפיות'}
+        ],
+        events: [
+          {type: 'pos', text: 'הכנסות Q1 ~$884M (+39% YoY) — האצה גם ב־US Commercial וגם Government'},
+          {type: 'pos', text: 'US Commercial Revenue +71% YoY — AIP / Foundry adoption מואץ'},
+          {type: 'pos', text: 'Government Revenue ~$487M — חוזים חדשים DoD ויחידות מודיעין'},
+          {type: 'pos', text: 'הנהלה העלתה הנחיית FY26 (Rev ~$3.9B+)'},
+          {type: 'neg', text: 'תמחור P/E עשרות × · שווי שוק 246% מעל LMT — Burry short bolt-on פתוח'},
+          {type: 'neu', text: 'הדסק: AVOID · "Defense — Hardware vs Hype" · Pair Trade: Long LMT / Short PLTR'}
+        ],
+        margins: [],
+        ceoName: 'Alex Karp · CEO',
+        ceoQuote: 'AIP הוא לא רק מוצר — זה השלב הבא של ה־operationalization של ארגונים. הביקוש מצד הקהילה המסחרית האמריקאית כל כך חזק שאני לעיתים מבקש מהצוות להאט. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '~$3.9B+ raised'},
+          {lbl: 'דוח Q2 2026', val: '~5·AUG·2026'},
+          {lbl: 'תמחור', val: 'P/E עשרות × קיצוני'}
+        ]
+      },
+      ARM: {
+        name: 'Arm Holdings',
+        period: 'Q4 FY26 · רבעון שהסתיים מרץ 2026',
+        isPrevious: true,
+        nextReportDate: '~6·AUG·2026 (Q1 FY27)',
+        kpis: [
+          {label: 'הכנסות Q4', value: '~$1.24B', yoy: '+34% YoY'},
+          {label: 'License Revenue', value: '~$528M', yoy: '+53% YoY'},
+          {label: 'תשואה שבועית', value: '+50%', yoy: 'שבוע 19·MAY · קיצוני'}
+        ],
+        events: [
+          {type: 'pos', text: 'הכנסות Q4 $1.24B (+34% YoY) — שיא רבעוני · v9 share גדל'},
+          {type: 'pos', text: 'License Revenue $528M — חוזים אסטרטגיים חדשים hyperscaler'},
+          {type: 'pos', text: 'Royalty Revenue ממשיך לגדול — adoption ARM באקוסיסטם AI (NVIDIA Grace, AWS Trainium)'},
+          {type: 'neg', text: '+50% בשבוע 19·MAY — ראלי קיצוני, צפיפות מקסימלית'},
+          {type: 'neu', text: 'תמחור P/E מעל 100× — תלוי בעמידה בהנחיית הצמיחה'},
+          {type: 'neg', text: 'הדסק: AVOID · "Crowded Long extreme" · פולבק סביר 15–20%'}
+        ],
+        margins: [],
+        ceoName: 'Rene Haas · CEO',
+        ceoQuote: 'ARM נמצא בלב כל מהפכת ה־AI — מ־data center דרך mobile ועד edge. v9 שלנו מאפשר קפיצה ארכיטקטונית בביצועים, ואנחנו רואים adoption מהיר מצד hyperscalers ו־AI accelerator vendors. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY27 Revenue', val: 'הוערכה מחדש'},
+          {lbl: 'דוח Q1 FY27', val: '~6·AUG·2026'},
+          {lbl: 'IV percentile', val: 'מקסימלי לאחר ראלי'}
+        ]
+      },
+      DELL: {
+        name: 'Dell Technologies',
+        period: 'Q4 FY26 · רבעון שהסתיים ינואר 2026',
+        isPrevious: true,
+        nextReportDate: '28·MAY·2026 AMC (Q1 FY27)',
+        kpis: [
+          {label: 'הכנסות Q4', value: '~$24B', yoy: '+7% YoY'},
+          {label: 'ISG Servers', value: '+22%', yoy: 'YoY · AI מוביל'},
+          {label: 'YTD 2026', value: '+176%', yoy: 'מוביל S&P'}
+        ],
+        events: [
+          {type: 'pos', text: 'AI Server backlog ~$9B+ — מואץ עם NVIDIA Blackwell ramp'},
+          {type: 'pos', text: 'ISG (Infrastructure Solutions Group) +22% YoY — AI servers מוביל'},
+          {type: 'pos', text: 'CSG (PCs) חוזר ל־growth — refresh cycle Windows 11 + AI PCs'},
+          {type: 'pos', text: 'הנהלה העלתה הנחיית FY27 — momentum AI server ממשיך'},
+          {type: 'neu', text: 'תמחור עלה מ־~10× ל־~20× FW — לא זול יותר, אבל backlog מצדיק'},
+          {type: 'pos', text: 'הדסק: BUY pullbacks · "AI Server Backlog Real" — pure-play אינפרסטרוקטורת AI'}
+        ],
+        margins: [],
+        ceoName: 'Michael Dell · Chairman & CEO',
+        ceoQuote: 'אנחנו בתחילת מהפכה. ה־AI Factories שאנחנו בונים עם NVIDIA וענקיות הענן ייצרו תוצאות בלתי נראות בשני העשורים האחרונים. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'דוח Q1 FY27', val: '28·MAY AMC'},
+          {lbl: 'AI Backlog', val: '~$9B+'},
+          {lbl: 'YTD', val: '+176%'}
+        ]
+      },
+      HPQ: {
+        name: 'HP Inc.',
+        period: 'Q1 FY26 · רבעון שהסתיים ינואר 2026',
+        isPrevious: true,
+        nextReportDate: '28·MAY·2026 AMC (Q2 FY26)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$13.5B', yoy: '+2% YoY'},
+          {label: 'PC Segment', value: 'Rebound', yoy: 'AI PC adoption'},
+          {label: 'Free Cash Flow', value: 'יציב', yoy: 'תוכנית קיצוץ עלויות'}
+        ],
+        events: [
+          {type: 'pos', text: 'PC revenue חזר לצמיחה — Windows 11 refresh cycle + AI PCs (Copilot+)'},
+          {type: 'pos', text: 'Printing margins יציבים — מהלך mix לעבר commercial'},
+          {type: 'neu', text: 'תוכנית "Future Ready" — קיצוץ עלויות $1.6B עד 2026'},
+          {type: 'neu', text: 'AI PC adoption איטית מהמצופה — Q2 קריטי לאינדיקציה'}
+        ],
+        margins: [],
+        ceoName: 'Enrique Lores · CEO',
+        ceoQuote: 'אנו רואים את ההתחלה של refresh cycle משמעותי — Windows 11 מסתיים, AI PCs מתחילים. השוק שלנו עומד מול הזדמנות רב־שנתית. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'דוח Q2 FY26', val: '28·MAY AMC'},
+          {lbl: 'AI PC', val: 'adoption איטית'},
+          {lbl: 'P/E FW', val: '~10–12×'}
+        ]
+      },
+      AVGO: {
+        name: 'Broadcom',
+        period: 'Q1 FY26 · רבעון שהסתיים פברואר 2026',
+        isPrevious: true,
+        nextReportDate: '~5·JUN·2026 AMC (Q2 FY26)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$14.92B', yoy: '+25% YoY'},
+          {label: 'AI Semis', value: '~$4.4B', yoy: '+77% YoY'},
+          {label: 'VMware', value: 'אינטגרציה', yoy: 'shift ל־subscription'}
+        ],
+        events: [
+          {type: 'pos', text: 'AI Semiconductor revenue $4.4B (+77% YoY) — custom ASICs ל־3 hyperscaler clients'},
+          {type: 'pos', text: 'VMware מעבר מ־perpetual ל־subscription מתקדם — ARR גדל'},
+          {type: 'pos', text: 'Free Cash Flow $6B+ ברבעון — buybacks ו־dividends אגרסיביים'},
+          {type: 'pos', text: 'Hock Tan: AI Revenue FY26 צפוי להגיע ל־$60–90B (לטווח של 3 שנים)'},
+          {type: 'neu', text: 'תמחור ~35× FW · פרימיום מוצדק על AI ASIC + VMware integration'}
+        ],
+        margins: [],
+        ceoName: 'Hock Tan · CEO',
+        ceoQuote: 'אנחנו ב־inflection בנפח ה־AI accelerator שלנו. שלושת hyperscaler clients שלנו מתכננים פריסות בקנה מידה גלובלי, ואנחנו רואים opportunity ל־$60–90B AI revenue על פני 3 שנים. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'Q2 FY26 Rev', val: '~$14.9B'},
+          {lbl: 'AI 3Y Outlook', val: '$60–90B'},
+          {lbl: 'דוח Q2', val: '~5·JUN AMC'}
+        ]
+      },
+      AMD: {
+        name: 'Advanced Micro Devices',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~5·AUG·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$7.4B', yoy: '+36% YoY'},
+          {label: 'Data Center', value: '~$3.7B', yoy: '+45% YoY'},
+          {label: 'MI325X / MI350X', value: 'ramp', yoy: 'AI accelerators'}
+        ],
+        events: [
+          {type: 'pos', text: 'Data Center revenue $3.7B (+45% YoY) — MI325X מתחיל ramp רחב'},
+          {type: 'pos', text: 'EPYC server CPU continues to take share from Intel'},
+          {type: 'pos', text: 'AI GPU revenue 2026 expected $7B+ — הוערכה מחדש פעמיים'},
+          {type: 'pos', text: 'MI350X roadmap לסוף 2026 — מתחרה בלאקוול'},
+          {type: 'neu', text: 'תמחור ~30× FW — מתון יחסית ל־NVIDIA'},
+          {type: 'pos', text: 'הדסק: HOLD core; ADD on weakness — "ה־#2 ב־AI Accelerators"'}
+        ],
+        margins: [],
+        ceoName: 'Lisa Su · CEO',
+        ceoQuote: 'AI ממשיך להאיץ — נראים visibility חזק לאורך 2026 ול־2027. MI325X ו־MI350X ממצבים אותנו לצמיחה דו־ספרתית גבוהה ב־Data Center בשנים הקרובות. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'Q2 Rev', val: '~$7.4B'},
+          {lbl: 'AI GPU 2026', val: '$7B+'},
+          {lbl: 'דוח Q2', val: '~5·AUG·2026'}
+        ]
+      },
+      HWM: {
+        name: 'Howmet Aerospace',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~30·JUL·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$2.0B', yoy: '+15% YoY'},
+          {label: 'EBITDA Margin', value: '~28%', yoy: 'שיא רב־שנתי'},
+          {label: 'Defense / Engine', value: 'book-to-bill חזק', yoy: 'מחסור capacity'}
+        ],
+        events: [
+          {type: 'pos', text: 'Engine Products +20%+ YoY — חלקי מנוע סילון/טורבינות בלוחות זמנים 12–18 חודשים'},
+          {type: 'pos', text: 'Defense missiles parts — backlog חזק מ־LMT, RTX, NOC'},
+          {type: 'pos', text: 'EBITDA margin 28% — pricing power מובהקת בצוואר בקבוק'},
+          {type: 'pos', text: 'Capacity expansion מוקצב — צמיחה מוגבלת על ידי capacity, לא ביקוש'},
+          {type: 'pos', text: 'הדסק: ADD on weakness — "Upstream supplier" של LMT/RTX, מחסור מוחלט'}
+        ],
+        margins: [{label: 'EBITDA', value: '28%', yoy: 'שיא רב־שנתי'}],
+        ceoName: 'John Plant · CEO',
+        ceoQuote: 'הביקוש מצד הענף האווירונאוטי וההגנתי חסר תקדים. הצוואר הוא לא ביקוש — זו קיבולת ייצור. אנחנו משקיעים אגרסיבית להרחבה, אך מקיימים משמעת תמחור. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '+12–15% guide'},
+          {lbl: 'דוח Q2', val: '~30·JUL'},
+          {lbl: 'Capacity', val: 'מוגבלת — Pricing power'}
+        ]
+      },
+      IBM: {
+        name: 'International Business Machines',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~22·JUL·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$14.5B', yoy: '+1% YoY'},
+          {label: 'Software', value: '+8%', yoy: 'YoY · Red Hat מוביל'},
+          {label: 'Quantum Allocation', value: '$2B', yoy: 'מימשל ארה"ב 2026'}
+        ],
+        events: [
+          {type: 'pos', text: 'Software revenue +8% YoY — Red Hat OpenShift growth מואץ'},
+          {type: 'pos', text: 'Consulting חוזר לצמיחה — AI consulting + watsonx adoption'},
+          {type: 'pos', text: 'הקצאת ממשל $2B ל־Quantum (חלק מתקציב 2026) — IBM נהנית כשחקן ראשי'},
+          {type: 'pos', text: 'watsonx ב־book-to-bill חזק — generative AI לארגונים'},
+          {type: 'neu', text: 'תמחור ~22× FW — מוצק יחסית לקבוצה'}
+        ],
+        margins: [],
+        ceoName: 'Arvind Krishna · CEO',
+        ceoQuote: 'Quantum הוא לא חזון יותר — זו מציאות הנדסית. ההכרזה של ממשל ארה"ב על $2B ל־quantum היא רק תחילת מסלול. watsonx ו־Red Hat ממקמים אותנו בלב הטרנספורמציה. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '+5%+ guide'},
+          {lbl: 'דוח Q2', val: '~22·JUL'},
+          {lbl: 'Quantum', val: '$2B gov · 2026'}
+        ]
+      },
+      NOC: {
+        name: 'Northrop Grumman',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~22·JUL·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$10B', yoy: '+5% YoY'},
+          {label: 'Backlog', value: '~$84B', yoy: 'כ־2 שנות מכירות'},
+          {label: 'B-21 Raider', value: 'מסירות', yoy: 'LRIP בתהליך'}
+        ],
+        events: [
+          {type: 'pos', text: 'B-21 Raider — Low-Rate Initial Production מתקדמת לפי לוחות זמנים'},
+          {type: 'pos', text: 'Backlog ~$84B — מכסה ~2 שנות מכירות'},
+          {type: 'pos', text: 'Sentinel ICBM program — לוחות זמנים מתעדכנים אך תמיכה דו־מפלגתית חזקה'},
+          {type: 'pos', text: 'Golden Dome — בין השחקנים המרכזיים (יחד עם LMT, RTX)'},
+          {type: 'neu', text: 'תמחור ~22× FW — מתון; פחות פופולרי מ־LMT'}
+        ],
+        margins: [],
+        ceoName: 'Kathy Warden · CEO',
+        ceoQuote: 'הסביבה הגיאופוליטית והתקציב ההגנתי הולכים יד ביד — Northrop ממוקמת ייחודית ב־B-21, Sentinel ו־Golden Dome כדי לתמוך בצרכי הביטחון של ארה"ב לעשורים הקרובים. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '+5% guide'},
+          {lbl: 'דוח Q2', val: '~22·JUL'},
+          {lbl: 'Backlog', val: '~$84B'}
+        ]
+      },
+      BA: {
+        name: 'Boeing',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~23·JUL·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$19B', yoy: '+18% YoY'},
+          {label: 'FCF Q1', value: 'שלילי', yoy: 'recovery cycle'},
+          {label: '737 MAX delivery', value: '~38/חודש', yoy: 'מואץ ל־42'}
+        ],
+        events: [
+          {type: 'pos', text: '737 MAX deliveries מגיעות לקצב 38/חודש — מאיצות ל־42 ב־Q3'},
+          {type: 'pos', text: '787 production עולה ל־7/חודש — הזמנות airlines חזקות'},
+          {type: 'pos', text: 'Defense backlog $61B+ — F-15EX, KC-46, T-7A'},
+          {type: 'neg', text: 'FCF שלילי Q1 — recovery עדיין בשלב מוקדם'},
+          {type: 'neu', text: 'תמחור: על EV/EBITDA כשליחזרת FCF — סטוקסטית לטווח 2027–2028'}
+        ],
+        margins: [],
+        ceoName: 'Kelly Ortberg · CEO',
+        ceoQuote: 'אנו מתקדמים במסלול ה־recovery שלנו — quality first, rate second. ה־737 MAX cadence והעלייה ב־787 מציבים אותנו לחזרה ל־FCF positive ב־H2 2026. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FCF FY26', val: 'positive H2'},
+          {lbl: 'דוח Q2', val: '~23·JUL'},
+          {lbl: '737 cadence', val: '38 → 42/חודש'}
+        ]
+      },
+      COST: {
+        name: 'Costco Wholesale',
+        period: 'Q2 FY26 · רבעון שהסתיים פברואר 2026',
+        isPrevious: true,
+        nextReportDate: '29·MAY·2026 AMC (Q3 FY26)',
+        kpis: [
+          {label: 'הכנסות Q2', value: '~$60.3B', yoy: '+9% YoY'},
+          {label: 'Comp Sales (ex Fuel/FX)', value: '+8.3%', yoy: 'YoY'},
+          {label: 'Membership Fees', value: '+10%', yoy: 'YoY'}
+        ],
+        events: [
+          {type: 'pos', text: 'Comp Sales (ex Fuel/FX) +8.3% — חוזק יציב יחסית לסקטור צרכני חלש'},
+          {type: 'pos', text: 'Membership Fees +10% YoY — העלאת דמי חברות (לראשונה מאז 2017) תרמה'},
+          {type: 'pos', text: 'E-commerce +20%+ — מנוע צמיחה משמעותי'},
+          {type: 'neu', text: 'תמחור ~50× FW — פרימיום קיצוני; דורש ביצוע מושלם'},
+          {type: 'neu', text: 'IV היסטורית תזוזה דוח קטנה (~3–4%) — Iron Condor פרמיה נמוכה'}
+        ],
+        margins: [],
+        ceoName: 'Ron Vachris · CEO',
+        ceoQuote: 'מנגנון המוצרים שלנו ו־membership loyalty ממשיכים לייצר תוצאות יציבות גם בסביבת צרכן מעורבת. השקעה במחסנים ו־e-commerce ממשיכה לתת רוח גבית. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'דוח Q3 FY26', val: '29·MAY AMC'},
+          {lbl: 'P/E FW', val: '~50×'},
+          {lbl: 'Historical move', val: '~3–4%'}
+        ]
+      },
+      KTOS: {
+        name: 'Kratos Defense',
+        period: 'Q1 2026',
+        isPrevious: true,
+        nextReportDate: '~5·AUG·2026 (Q2 2026)',
+        kpis: [
+          {label: 'הכנסות Q1', value: '~$310M', yoy: '+18% YoY'},
+          {label: 'Backlog', value: '~$1.5B', yoy: ''},
+          {label: 'Hypersonics + UAS', value: 'מואץ', yoy: 'CCAs growth'}
+        ],
+        events: [
+          {type: 'pos', text: 'CCA (Collaborative Combat Aircraft) — שותפות עם Anduril, USAF Increment 1'},
+          {type: 'pos', text: 'Hypersonic test vehicles — חוזים חדשים DoD MACH-TB'},
+          {type: 'pos', text: 'Tactical drones (Valkyrie, Mako) — adoption USAF / Marines'},
+          {type: 'neu', text: 'תמחור ~50× FW · "alpha small-cap defense" — תנודתי מאוד'},
+          {type: 'pos', text: 'הדסק: Alpha play in defense — סייז קטן (0.5–1%) על momentum'}
+        ],
+        margins: [],
+        ceoName: 'Eric DeMarco · CEO',
+        ceoQuote: 'אנחנו רואים inflection בתקציב unmanned systems ו־hypersonics. Kratos ממוקמת ייחודית כ־affordable mass producer של מערכות disruptive ל־USAF, Marines, ויחידות מודיעין. (פרפרזה על שיחת הוועידה)',
+        guidance: [
+          {lbl: 'FY26 Rev', val: '+12–15% guide'},
+          {lbl: 'דוח Q2', val: '~5·AUG·2026'},
+          {lbl: 'Backlog', val: '~$1.5B'}
+        ]
+      },
+      NOK: {
+        name: 'Nokia', period: 'Q1 2026 · YTD +140%',
+        kpis: [
+          {label: 'הכנסות Q1', value: '€4.5B', yoy: '+4% YoY'},
+          {label: 'EPS Q1', value: '€0.05', yoy: 'מ־€0.03 (×1.67)'},
+          {label: 'תשואה YTD', value: '+140%', yoy: '$6.50 → $15.43'}
+        ],
+        events: [
+          {type: 'pos', text: 'NVDA השקיעה $1B במניית NOK ב־$6.01 (אוקטובר 2025) — ~3% stake'},
+          {type: 'pos', text: 'פלטפורמת AI-RAN עם 10 לקוחות: Deutsche Telekom · Vodafone · SoftBank · T-Mobile (ראשון לפריסה)'},
+          {type: 'pos', text: 'AI Networking Innovation Lab בסאניויל (מאי) — שותפויות AMD · Lenovo · Supermicro · Keysight'},
+          {type: 'pos', text: 'Defense: Lockheed Martin 5G (Nokia Federal Solutions) + שותפות Anduril'},
+          {type: 'pos', text: 'Q1 הנחיה הועלתה: 2026 Op Profit €2.0–2.5B; Capex €900M–€1.0B'},
+          {type: 'neu', text: 'P/E מעל 90 · Barclays Underweight על valuation — תמחור מתוח'}
+        ],
+        margins: [],
+        ceoName: 'Justin Hotard · CEO (מינוי אפריל 2025)',
+        ceoQuote: 'הביקוש מ־hyperscalers ולקוחות AI/Cloud דוחף את Optical Networks ו־Network Infrastructure לרווחיות חדשה. השותפות עם NVIDIA ב־AI-RAN, יחד עם הרחבת השותפויות ב־defense, ממקמת את Nokia כשחקן מרכזי באינפרסטרוקטורת ה־AI הדור הבא. (פרפרזה על פרסום Q1 2026)',
+        guidance: [
+          {lbl: 'Q2 Sales QoQ', val: '+5–9%'},
+          {lbl: 'FY26 Op Profit', val: '€2.0–2.5B'},
+          {lbl: 'FY26 Capex', val: '€900M–€1.0B'}
+        ]
+      }
+    };
+
+    const overlay = document.getElementById('stockModal');
+    const content = document.getElementById('smContent');
+    function closeModal() { overlay.classList.remove('active'); }
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.classList.contains('active')) closeModal(); });
+
+    function render(ticker) {
+      const d = STOCK_DATA[ticker];
+      if (!d) { renderNoData(ticker); return; }
+      const kpisHtml = d.kpis.map(k => 
+        `<div class="sm-kpi"><div class="sm-kpi-label">${k.label}</div><div class="sm-kpi-value">${k.value}</div>${k.yoy ? `<div class="sm-kpi-yoy">▲ ${k.yoy}</div>` : ''}${k.vs ? `<div class="sm-kpi-vs">vs ${k.vs}</div>` : ''}</div>`
+      ).join('');
+      const eventsHtml = d.events.map(e => `<li class="${e.type === 'neg' ? 'neg' : e.type === 'neu' ? 'neu' : ''}">${e.text}</li>`).join('');
+      const marginsHtml = d.margins && d.margins.length ? d.margins.map(m => {
+        const pct = parseFloat(m.value) || 0;
+        return `<div class="sm-margins-row"><span class="label">${m.label}</span><div class="bar"><i style="width:${Math.min(pct, 100)}%"></i></div><span class="val">${m.value}</span><span class="yoy">${m.yoy || ''}</span></div>`;
+      }).join('') : '';
+      const guideHtml = d.guidance && d.guidance.length ? d.guidance.map(g =>
+        `<div class="box"><div class="lbl">${g.lbl}</div><div class="val">${g.val}</div>${g.vs ? `<div class="vs">vs ${g.vs}</div>` : ''}</div>`
+      ).join('') : '';
+
+      const pillHtml = d.isPrevious
+        ? `<div class="sm-pill">נתונים מדוח קודם · דוח קרוב בתאריך ${d.nextReportDate || 'בקרוב'}</div>`
+        : '';
+      content.innerHTML = `
+        <button class="sm-close" aria-label="סגור">×</button>
+        <div class="sm-header">
+          <div class="sm-logo">${d.name}</div>
+          <div class="sm-period">${ticker} · ${d.period}</div>
+        </div>
+        <div class="sm-body">
+          ${pillHtml}
+          <div class="sm-kpis">${kpisHtml}</div>
+          <div class="sm-section"><h4>אירועים מרכזיים</h4><ul class="sm-events">${eventsHtml}</ul></div>
+          ${marginsHtml ? `<div class="sm-section"><h4>שולי רווח</h4>${marginsHtml}</div>` : ''}
+          <div class="sm-section sm-ceo"><h4>דברי המנכ"ל <span class="name">${d.ceoName}</span></h4><div class="sm-ceo-quote">"${d.ceoQuote}"</div></div>
+          ${guideHtml ? `<div class="sm-section"><h4>תחזית קדימה</h4><div class="sm-guide-grid">${guideHtml}</div></div>` : ''}
+        </div>
+      `;
+      content.querySelector('.sm-close').addEventListener('click', closeModal);
+      overlay.classList.add('active');
+    }
+
+    function renderNoData(ticker) {
+      content.innerHTML = `
+        <button class="sm-close" aria-label="סגור">×</button>
+        <div class="sm-header no-data">
+          <div class="sm-logo">${ticker}</div>
+          <div class="sm-period">דשבורד לא זמין</div>
+        </div>
+        <div class="sm-body">
+          <div class="sm-no-data">
+            <p>אין נתוני דוח מאומתים בארטיפקט עבור <strong>${ticker}</strong>.<br>בדיקה חיה במקורות חיצוניים:</p>
+            <a href="https://finance.yahoo.com/quote/${ticker}" target="_blank" rel="noopener">Yahoo Finance</a>
+            <a href="https://www.morningstar.com/stocks/xnas/${ticker.toLowerCase()}/quote" target="_blank" rel="noopener">Morningstar</a>
+            <a href="https://www.marketchameleon.com/Overview/${ticker}/" target="_blank" rel="noopener">MarketChameleon</a>
+            <a href="https://www.tradingview.com/symbols/${ticker}/" target="_blank" rel="noopener">TradingView</a>
+          </div>
+        </div>
+      `;
+      content.querySelector('.sm-close').addEventListener('click', closeModal);
+      overlay.classList.add('active');
+    }
+
+    document.querySelectorAll('code.tk').forEach(el => {
+      const ticker = el.textContent.trim();
+      el.addEventListener('click', () => render(ticker));
+    });
+
+    // טיקרים שמופיעים כ-<td class="ticker"> בטבלאות (Section 9, 11, 14 וכו')
+    // ב-Section 4 לפעמים יש טקסט נוסף ("MOD 18·JUN 265") — נקח את המילה הראשונה
+    document.querySelectorAll('td.ticker').forEach(el => {
+      const ticker = el.textContent.trim().split(/\s+/)[0].toUpperCase();
+      el.addEventListener('click', () => render(ticker));
+    });
   })();
 </script>
 
